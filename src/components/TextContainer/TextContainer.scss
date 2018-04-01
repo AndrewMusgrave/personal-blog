@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
+$fontColor: #000000;
+
+.text-container {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $fontColor;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-decoration: none;
+
+  > p {
+    margin: 0;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

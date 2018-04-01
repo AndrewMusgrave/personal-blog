@@ -1,0 +1,115 @@
+@import '../../layouts/index.scss';
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  > * + * {
+    margin-top: .6rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .spinner {
+    margin-right: 1rem;
+  }
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: auto;
+  width: 100%;
+
+  .nav-links {
+    margin-right: .6rem;
+  }
+}
+
+
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    max-width: 540px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    max-width: 960px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content i:first-child {
+  padding-right: .7rem;
+}
+
+.navbar-wrapper {
+  padding: 1rem 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background:$navBackground;
+}
+
+.social-icon {
+  margin-left: 5px;
+}

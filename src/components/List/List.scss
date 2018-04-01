@@ -1,0 +1,27 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.list-row {
+  flex-direction: row;
+  > * {
+    margin-right: .7rem;
+  }
+}
+
+.list-column {
+  flex-direction: column;
+  > * {
+    margin-bottom: .7rem;
+  }
+}
+
+.no-margin {
+  > * {
+    margin-bottom: 0rem;
+  }
+}

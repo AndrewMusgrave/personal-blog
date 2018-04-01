@@ -1,0 +1,26 @@
+.spinner {
+  min-height: 2rem;
+  min-width: 2rem;
+  border: 2px solid #ddd;
+  border-top-color: #81ecec;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    border-top-color: #81ecec;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    border-top-color: #a29bfe;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    border-top-color: #81ecec;
+    transform: rotate(360deg);
+  }
+}
+
