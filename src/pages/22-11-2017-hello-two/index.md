@@ -18,6 +18,8 @@ In the meantime, I know there are a lot of men out there right now with good int
 
 ***
 
+In the meantime, I know there are a lot of men out there right now with good intentions who want to help change things, but it’s not always clear which actions are most helpful. And asking the people who are already doing extra work to do the additional work of teaching you how to help them do less work is…annoying
+
 ![This is a caption](https://images.unsplash.com/photo-1506269351850-0428eaed2193?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a1512d7659e4817df8217cdb9aa09d7a&auto=format&fit=crop&w=1350&q=80)
 <figcaption>sdsd</figcaption>
 
@@ -41,3 +43,6 @@ Then, when there’s a blur event on a password/credit card field, or a form sub
 > f an attacker successfully injects any code at all, it’s pretty much game over
 
 In some wise words from <u>Google</u>:
+
+  ![My image](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+  <figcaption>sdsd</figcaption>

@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
   return (
     <Container>
       <div className="card-intro">
-      <img class="padding profile-img" src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg" width="200" height="200" />
+      <img src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg" width="200" height="200" />
         <TextContainer>
           <Heading Element="h1" size="large">
             andrew musgrave.
