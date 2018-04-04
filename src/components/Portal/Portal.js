@@ -13,12 +13,10 @@ import ReactDOM from 'react-dom';
 export default class Portal extends Component {
   render() {
     let node = document.getElementById(this.props.id);
-    console.log(node)
     if (!node) {
       while (!node) {
         setTimeout(() => {
           node = document.getElementById(this.props.id);
-          console.log(node)
         }, 10000)
       }
     }

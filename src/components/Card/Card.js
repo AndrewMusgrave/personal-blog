@@ -57,7 +57,6 @@ const Card = ({
     </div>
   )
 
-  console.log(author, minutes, date, tags);
   return (
     <TextContainer>
       <article>
