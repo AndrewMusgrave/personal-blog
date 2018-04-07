@@ -16,10 +16,10 @@ import './Nav.scss'
 
 const routeInfo = [
   { name: 'Home',
-    to: '/home',
+    to: '/',
   },
-  { name: 'Articles',
-    to: '/articles',
+  { name: 'Tags',
+    to: '/tags',
   },
 ];
 
@@ -50,6 +50,7 @@ class Nav extends Component {
 
   render() {
     const {offsetTop} = this.state;
+    const {recentArticle} = this.props;
     const listMarkup = routeInfo && (
       <List items={routeInfo.map((route, ind) => (
         <Link {...route} key={ind}/>
@@ -58,15 +59,11 @@ class Nav extends Component {
 
     const navContentMarkup = (
       <div className="nav-content">
+      <GatsbyLink style={{color: 'inherit', textDecoration: 'none'}} to="search">
         <Icon src="search" />
-        <Button>
-          <GatsbyLink to="test"
-          style={{
-            color: 'inherit',
-            textDecoration: 'none',
-          }}>
+      </GatsbyLink>
+        <Button to={recentArticle}>
             Recent article
-          </GatsbyLink>
         </Button>
       </div>
     )
@@ -89,16 +86,18 @@ class Nav extends Component {
     const headerBrandMarkup = (
       <div className="header-brand">
         <Spinner />
-        <Heading nav>
-          Andrew M.
-        </Heading>
+        <a style={{color: 'inherit', textDecoration: 'none'}} href="http://www.andrewmusgrave.me" target="_blank">
+          <Heading nav>
+            Andrew M.
+          </Heading>
+        </a>
       </div>
     )
 
     const headerSocialIcons = (
       <div className="social-media-icons">
-        <SocialIcon url="twitter.com" style={{ height: '2rem', width: '2rem' }} />
-        <SocialIcon url="github.com" style={{ height: '2rem', width: '2rem' }} />
+        <SocialIcon url="https://twitter.com/" style={{ height: '2rem', width: '2rem' }} />
+        <SocialIcon url="https://github.com/" style={{ height: '2rem', width: '2rem' }} />
       </div>
     )
 

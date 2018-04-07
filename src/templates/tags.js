@@ -2,6 +2,11 @@ import React from "react";
 
 // Components
 import Link from "gatsby-link";
+import Container from '../components/Container'
+import TextContainer from "../components/TextContainer";
+import Heading from '../components/Heading'
+import PostList from '../components/PostList'
+import Button from '../components/Button'
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
@@ -9,26 +14,22 @@ const Tags = ({ pathContext, data }) => {
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`;
-
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { path, title } = node.frontmatter;
-          return (
-            <li key={path}>
-              <Link to={path}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
-    </div>
+    <Container>
+      <TextContainer>
+        <Heading spacing Element='h1' size="large">{tagHeader}</Heading>
+      </TextContainer>
+      <PostList
+        items={edges}
+      />
+      <Button>
+        <Link
+        style={{color: 'inherit', textDecoration: 'none'}}
+        to="/tags">
+          All tags
+        </Link>
+      </Button>
+    </Container>
   );
 };
 
@@ -44,9 +45,15 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt
           frontmatter {
             title
             path
+            minutes
+            date(formatString: "DD MMMM, YYYY")
+            tags
+            author
+            avatar
           }
         }
       }

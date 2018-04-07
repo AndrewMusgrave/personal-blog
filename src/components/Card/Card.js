@@ -33,9 +33,11 @@ const Card = ({
 
   const tagMarkup = tags && (
     tags.map((tag, ind) => (
-      <Tag key={ind}>
-        {tag}
-      </Tag>
+      <Link style={{color: 'inherit', textDecoration: 'none'}} to={`/tags/${tag}`}>
+        <Tag key={ind}>
+          {tag}
+        </Tag>
+      </Link>
     ))
   )
 

@@ -3,28 +3,29 @@ import Link from 'gatsby-link'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import Heading from '../components/Heading'
+import PostList from '../components/PostList'
 import '../styles/styles.scss';
 import TextContainer from '../components/TextContainer/TextContainer';
 
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  const postMarkup = posts && (
-    posts.map((post, ind) => (
-        <li key={ind}>
-          <Card
-            excerpt={post.node.excerpt}
-            {...post.node.frontmatter}
-          />
-        </li>
-      )
-    )
-  )
+  // const postMarkup = posts && (
+  //   posts.map((post, ind) => (
+  //       <li key={ind}>
+  //         <Card
+  //           excerpt={post.node.excerpt}
+  //           {...post.node.frontmatter}
+  //         />
+  //       </li>
+  //     )
+  //   )
+  // )
 
   return (
     <Container>
       <div className="card-intro">
-      <img src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg" width="200" height="200" />
+      <img style={{minHeight: '200px', minWidth: '200px'}} src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg" width="200" height="200" />
         <TextContainer>
           <Heading Element="h1" size="large">
             Andrew Musgrave.
@@ -32,9 +33,12 @@ const IndexPage = ({ data }) => {
           <p>hello, i'm a developer in ottawa ontario. working at shopify on their design system; polaris. if you’re interested in my blog you’ll see posts ranging from, computer science to front-end as well as the odd opinion based post.</p>
         </TextContainer>
       </div>
-      <ul className="post-list">
+      {/* <ul className="post-list">
         {postMarkup}
-      </ul>
+      </ul> */}
+      <PostList
+        items={posts}
+      />
     </Container>
   )
 }

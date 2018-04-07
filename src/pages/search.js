@@ -75,16 +75,18 @@ class SearchPage extends Component {
 
     return (
       <Container>
-        <div className="card-intro">
+        <div>
           <TextContainer>
-            <Heading Element="h1" size="large">
+            <Heading Element="h1" size="large" spacing>
               search my blog.
             </Heading>
             <input
+              className="search-input"
               type="text"
               value={searchTerm}
               onChange={this.handleSearch}
               onKeyDown={this.handleKeyDown}
+              placeholder="React..."
             />
           </TextContainer>
         </div>
@@ -145,7 +147,3 @@ export const pageQuery = graphql`
 `
 
 export default SearchPage
-
-// go through all posts adding together keywords and tags
-// elim dups
-// sort

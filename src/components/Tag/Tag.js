@@ -3,9 +3,9 @@ import './Tag.scss'
 
 const Tag = ({children}) => {
   return (
-    <span className="tag">
+    <div className="Tag">
       {children}
-    </span>
+    </div>
   )
 }
 

@@ -1,7 +1,8 @@
 $baseColor: #04396a;
 $baseOutline: #83e5af;
 
-.tag {
+.Tag {
+  display: inline-block;
   border: 1px solid $baseOutline;
   color: $baseColor;
   border-radius: 5px;

@@ -1,0 +1,175 @@
+/*
+Name:   Duotone Forest
+Author: by Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-forest-dark.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
+
+code[class*="langauge-"],
+pre[class*="langauge-"] {
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  // background: #2a2d2a;
+  color: #687d68;
+}
+
+pre[class*="langauge-"]::-moz-selection, pre[class*="langauge-"] ::-moz-selection,
+code[class*="langauge-"]::-moz-selection, code[class*="langauge-"] ::-moz-selection {
+  text-shadow: none;
+  background: #435643;
+}
+
+pre[class*="langauge-"]::selection, pre[class*="langauge-"] ::selection,
+code[class*="langauge-"]::selection, code[class*="langauge-"] ::selection {
+  text-shadow: none;
+  background: #435643;
+}
+
+/* Code blocks */
+pre[class*="langauge-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="langauge-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8ce5af;
+}
+
+.token.punctuation {
+  color: #dedede;
+  // color: #ecf5e5;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.tag,
+.token.operator,
+.token.number {
+  // color: #1abc9c;
+  color: #5ce496;
+}
+
+.token.property,
+.token.function {
+  // color: #2980b9;
+  color: #29a5eb;
+}
+
+code.langauge-javascript,
+code.langauge-jsx,
+.token.attr-name {
+  color: #c0e5c6;
+}
+
+code.langauge-css,
+code.langauge-scss,
+.token.boolean,
+.token.string,
+.token.entity,
+.token.url,
+.langauge-css .token.string,
+.langauge-scss .token.string,
+.style .token.string,
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit,
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #027a54;
+}
+
+.token.tag-id,
+.token.selector,
+.token.atrule-id {
+  color: #027a54;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #1b73ff;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #f0fff0;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.important {
+  color: #82AAFF;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre > code.highlight {
+  outline: .4em solid #383D51;
+  outline-offset: .4em;
+}
+
+.token.class-name {
+  color: #1b6fff
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #2c302c;
+}
+
+.line-numbers-rows > span:before {
+  color: #3b423b;
+}
+
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight {
+  background: rgba(162, 179, 77, 0.2);
+  background: -webkit-linear-gradient(left, rgba(162, 179, 77, 0.2) 70%, rgba(162, 179, 77, 0));
+  background: linear-gradient(to right, rgba(162, 179, 77, 0.2) 70%, rgba(162, 179, 77, 0));
+}
