@@ -2,25 +2,25 @@
   min-height: 2rem;
   min-width: 2rem;
   border: 2px solid #ddd;
-  border-top-color: #81ecec;
+  border-top-color: #c4ffdb;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
   0% {
-    border-top-color: #81ecec;
+    border-top-color: #c4ffdb;
     transform: rotate(0deg);
   }
 
   50% {
-    border-top-color: #a29bfe;
-    transform: rotate(180deg);
+    border-top-color: #438c5f;
+    transform: rotate(360deg);
   }
 
   100% {
-    border-top-color: #81ecec;
-    transform: rotate(360deg);
+    border-top-color: #c4ffdb;
+    transform: rotate(720deg);
   }
 }
 

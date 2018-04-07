@@ -1,3 +1,6 @@
+$excerptFontColor: #04396a;
+$baseOutline: #83e5af;
+
 article {
   width: 100%;
   text-align: left;
@@ -12,7 +15,7 @@ article {
 .card-personal {
   margin-top: .4rem;
   line-height: 1.2;
-
+  color: $excerptFontColor;
 
   display: flex;
   justify-content: space-between;
@@ -22,6 +25,7 @@ article {
 .excerpt {
   font-size: .8rem;
   font-weight: 300;
+  color: #333;
 }
 
 .card-details {
@@ -34,7 +38,8 @@ article {
 
 .card-dot {
   font-size: 1rem;
-  color: #5c5c5c;
+  // color: #5c5c5c;
+  color: $baseOutline;
 }
 
 .tag-container {

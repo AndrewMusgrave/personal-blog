@@ -1,22 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
-$headingColor: #05386B;
+// @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+// @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+// $headingColor: #05386B;
+$headingColor: #349581;
+
 
 .heading {
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Expletus Sans', cursive;
+  // font-family: 'Merriweather Sans', sans-serif;
   color: $headingColor;
   letter-spacing: .3rem;
 }
 
 .headingLarge {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 3.4rem;
 }
 
 .headingMedium {
-  font-size: 2rem;
-  font-weight: 400;
+  // font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 550;
   line-height: 2.6rem;
 }
 
@@ -24,4 +31,8 @@ $headingColor: #05386B;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.3rem;
+}
+
+.nav-header {
+  color: #04396a;
 }

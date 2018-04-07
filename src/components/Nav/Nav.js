@@ -89,7 +89,7 @@ class Nav extends Component {
     const headerBrandMarkup = (
       <div className="header-brand">
         <Spinner />
-        <Heading>
+        <Heading nav>
           Andrew M.
         </Heading>
       </div>

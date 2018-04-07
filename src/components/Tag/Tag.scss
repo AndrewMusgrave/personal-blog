@@ -1,5 +1,9 @@
+$baseColor: #04396a;
+$baseOutline: #83e5af;
+
 .tag {
-  border: 1px solid black;
+  border: 1px solid $baseOutline;
+  color: $baseColor;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;

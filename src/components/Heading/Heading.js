@@ -6,12 +6,13 @@ function classNames(...props) {
 }
 
 
-const Heading = ({children, Element = 'h2', size = 'medium'}) => {
+const Heading = ({children, Element = 'h2', size = 'medium', nav = false}) => {
   const className = classNames(
     'heading',
     size === 'large' && 'headingLarge',
     size === 'medium' && 'headingMedium',
     size === 'small' && 'headingSmall',
+    nav && 'nav-header'
   )
 
   return (
