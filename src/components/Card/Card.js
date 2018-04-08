@@ -1,11 +1,7 @@
 import React from 'react';
-import './Card.scss';
-import Link from '../Link';
+import { Link, Icon, Tag, Heading, TextContainer } from '../';
 
-import Icon from '../Icon';
-import Tag from '../Tag';
-import Heading from '../Heading';
-import TextContainer from '../TextContainer';
+import './Card.scss';
 
 const Card = ({
   author,

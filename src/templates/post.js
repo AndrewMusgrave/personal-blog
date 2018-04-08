@@ -1,9 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import ReactDisqusComments from 'react-disqus-comments';
-import Heading from '../components/Heading';
-import Container from '../components/Container';
-import TextContainer from '../components/TextContainer';
+import { Heading, Container, TextContainer } from '../components';
+
 import '../styles/styles.scss';
 
 export default function Template({ data }) {

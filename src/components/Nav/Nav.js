@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import Link from '../Link';
 import debounce from 'lodash/debounce';
-import Icon from '../Icon';
-import Heading from '../Heading';
-import List from '../List';
-import Button from '../Button';
-import Portal from '../Portal';
-import Spinner from '../Spinner';
-import EventHandler from '../EventHandler';
-import Logo from '../../assets/andrew bear_final.png';
-
-import TextContainer from '../TextContainer';
 import { SocialIcon } from 'react-social-icons';
+import Logo from '../../assets/andrew bear_final.png';
+import {
+  Link,
+  Icon,
+  Heading,
+  List,
+  Button,
+  Portal,
+  Spinner,
+  EventHandler,
+  TextContainer,
+} from '../';
+
 import './Nav.scss';
 
 const routeInfo = [

@@ -12,7 +12,7 @@ const Heading = ({
   nav = false,
   spacing = false,
   spacingTop = false,
-  screen = 'web',
+  screen,
 }) => {
   const className = classNames(
     'heading',

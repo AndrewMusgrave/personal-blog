@@ -1,10 +1,12 @@
 import React from 'react';
-import Link from '../components/Link';
-import Container from '../components/Container';
-import TextContainer from '../components/TextContainer';
-import Heading from '../components/Heading';
-import PostList from '../components/PostList';
-import Button from '../components/Button';
+import {
+  Link,
+  Container,
+  TextContainer,
+  Heading,
+  PostList,
+  Button,
+} from '../components';
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;

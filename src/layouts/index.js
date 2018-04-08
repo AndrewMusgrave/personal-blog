@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Nav from '../components/Nav';
+import { Nav } from '../components';
 // require("prismjs/themes/prism-twilight.css");
 import './Theme.scss';
 import './index.scss';

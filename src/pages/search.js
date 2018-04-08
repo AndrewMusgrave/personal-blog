@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Container from '../components/Container';
-import Card from '../components/Card';
-import Heading from '../components/Heading';
+import { Container, Card, Heading, TextContainer } from '../components';
+
 import '../styles/styles.scss';
-import TextContainer from '../components/TextContainer';
 
 const WAIT_INTERVAL = 500;
 const ENTER_KEY = 13;

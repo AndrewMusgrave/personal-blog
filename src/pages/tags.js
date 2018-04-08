@@ -1,12 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import kebabCase from 'lodash/kebabCase';
-import Container from '../components/Container';
-import TextContainer from '../components/TextContainer';
-import Heading from '../components/Heading';
-import Tag from '../components/Tag';
-import Link from '../components/Link';
+import { Container, TextContainer, Heading, Tag, Link } from '../components';
+
 import '../styles/styles.scss';
 
 const TagsPage = ({

@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from '../Link';
-import TextContainer from '../TextContainer';
+import { Link, TextContainer } from '../';
+
 import './Button.scss';
 
 const Button = ({ children, onClick, to }) =>

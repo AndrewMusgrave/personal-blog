@@ -1,10 +1,13 @@
 import React from 'react';
-import Container from '../components/Container';
-import Card from '../components/Card';
-import Heading from '../components/Heading';
-import PostList from '../components/PostList';
+import {
+  Container,
+  Card,
+  Heading,
+  PostList,
+  TextContainer,
+} from '../components';
+
 import '../styles/styles.scss';
-import TextContainer from '../components/TextContainer/TextContainer';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
