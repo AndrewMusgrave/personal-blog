@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
-import {default as GatsbyLink} from 'gatsby-link'
+import Link from '../Link'
 import debounce from 'lodash/debounce'
 import Icon from '../Icon'
 import Heading from '../Heading'
-import Link from '../Link'
 import List from '../List'
 import Button from '../Button'
 import Portal from '../Portal'
@@ -60,9 +59,9 @@ class Nav extends Component {
 
     const navContentMarkup = (
       <div className="nav-content">
-      <GatsbyLink style={{color: 'inherit', textDecoration: 'none'}} to="search">
+      <Link to="search">
         <Icon src="search" />
-      </GatsbyLink>
+      </Link>
         <Button to={recentArticle}>
             Recent article
         </Button>

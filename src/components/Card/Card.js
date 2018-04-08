@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.scss'
-import Link from 'gatsby-link'
+import Link from '../Link';
 
 import Icon from '../Icon'
 import Tag from '../Tag'
@@ -20,7 +20,6 @@ const Card = ({
   const headingMarkup = title && path && excerpt && (
     <Link
     to={path}
-    className="card-link"
     >
       <Heading>
           {title}
@@ -33,7 +32,7 @@ const Card = ({
 
   const tagMarkup = tags && (
     tags.map((tag, ind) => (
-      <Link style={{color: 'inherit', textDecoration: 'none'}} to={`/tags/${tag}`}>
+      <Link to={`/tags/${tag}`}>
         <Tag key={ind}>
           {tag}
         </Tag>

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import Link from "gatsby-link";
+import Link from "../components/Link";
 import Container from '../components/Container'
 import TextContainer from "../components/TextContainer";
 import Heading from '../components/Heading'
@@ -24,7 +24,6 @@ const Tags = ({ pathContext, data }) => {
       />
       <Button>
         <Link
-        style={{color: 'inherit', textDecoration: 'none'}}
         to="/tags">
           All tags
         </Link>

@@ -6,7 +6,7 @@ import Container from '../components/Container'
 import TextContainer from '../components/TextContainer'
 import Heading from '../components/Heading';
 import Tag from '../components/Tag'
-import Link from "gatsby-link";
+import Link from '../components/Link'
 import '../styles/styles.scss';
 
 const TagsPage = ({
@@ -21,7 +21,7 @@ const TagsPage = ({
       <ul className="tag-list">
         {group.map(tag => (
           <li key={tag.fieldValue}>
-              <Link style={{color: 'inherit', textDecoration: 'none'}} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
             <Tag>
                 {tag.fieldValue}
             </Tag>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import Heading from '../components/Heading'

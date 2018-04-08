@@ -1,23 +1,19 @@
 import React from 'react'
-import GatsbyLink from 'gatsby-link'
+import Link from '../Link'
 import TextContainer from '../TextContainer';
 import './Button.scss'
 
 const Button = ({children, onClick, to}) => (
   to
     ? (
-      <GatsbyLink to={to}
-style={{
-  color: 'inherit',
-  textDecoration: 'none',
-}}>
+      <Link to={to}>
       <button
       className={`button`}
       onClick={onClick}
     >
       {children}
     </button>
-    </GatsbyLink>
+    </Link>
     )
     : (
       <button
