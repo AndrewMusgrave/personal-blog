@@ -10,11 +10,11 @@ import TextContainer from '../TextContainer';
 const Card = ({
   author,
   avatar,
-  excerpt, //
-  path, //
+  excerpt,
+  path,
   minutes,
   tags,
-  title, //
+  title,
   date,
 }) => {
   const headingMarkup = title &&

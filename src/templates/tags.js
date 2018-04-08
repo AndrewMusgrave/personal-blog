@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Components
 import Link from '../components/Link';
 import Container from '../components/Container';
 import TextContainer from '../components/TextContainer';

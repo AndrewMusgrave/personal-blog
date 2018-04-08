@@ -7,7 +7,6 @@ import TextContainer from '../components/TextContainer';
 import '../styles/styles.scss';
 
 export default function Template({ data }) {
-  //named markdownRemark post
   const { markdownRemark: post } = data;
   return (
     <Container>

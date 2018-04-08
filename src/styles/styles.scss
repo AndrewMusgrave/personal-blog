@@ -57,8 +57,6 @@
   }
 
   blockquote {
-    // align-self: center;
-
     margin: 0;
     border-left: 3px color(dark, light) solid;
     margin-left: -3px;
@@ -107,23 +105,6 @@
       color: color(dark);
     }
   }
-
-  // hr {
-  //   border: none;
-  //   text-align: center;
-  //   overflow: visible;
-  //   height: 0;
-  //   margin: 5rem 0;
-  //   margin-top: 1rem;
-  //   position: relative;
-
-  //   &::before {
-  //     font-size: 2rem;
-  //     letter-spacing: .8rem;
-  //     content: '...';
-  //     color: #333;
-  //   }
-  // }
 }
 
 .tag-list {
@@ -131,15 +112,11 @@
   margin: 0;
 
   > *::before {
-    content: "\f105"; /* FontAwesome Unicode */
+    content: "\f105";
     font-family: FontAwesome;
     display: inline-block;
-    margin-left: -1.3em; /* same as padding-left set on li */
-    width: 1.3em; /* same as padding-left set on li */
-  }
-
-  > * {
-    // padding: .2rem;
+    margin-left: -1.3em;
+    width: 1.3em;
   }
 }
 

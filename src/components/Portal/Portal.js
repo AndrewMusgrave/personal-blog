@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// loader error with reactDOM type canoot return null from functional component?
-// export default function({children, id}: Props) {
-//   const node: any = document.getElementById(id);
-//   return ReactDOM.createPortal(
-//     children,
-//     node,
-//   );
-// }
-
 export default class Portal extends Component {
   render() {
     let node = document.getElementById(this.props.id);

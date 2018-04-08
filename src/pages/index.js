@@ -8,17 +8,6 @@ import TextContainer from '../components/TextContainer/TextContainer';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  // const postMarkup = posts && (
-  //   posts.map((post, ind) => (
-  //       <li key={ind}>
-  //         <Card
-  //           excerpt={post.node.excerpt}
-  //           {...post.node.frontmatter}
-  //         />
-  //       </li>
-  //     )
-  //   )
-  // )
 
   return (
     <Container>
@@ -41,9 +30,6 @@ const IndexPage = ({ data }) => {
           </p>
         </TextContainer>
       </div>
-      {/* <ul className="post-list">
-        {postMarkup}
-      </ul> */}
       <PostList items={posts} />
     </Container>
   );

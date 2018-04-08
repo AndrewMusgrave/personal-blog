@@ -41,20 +41,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       })
     });
 
-    // Tag pages:
     let tags = [];
-    // Iterate through each post, putting all gound tags into 'tags'
     _.each(posts, edge => {
-      // console.log(edge.node.frontmatter)
       if (_.get(edge, "node.frontmatter.tags")) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
     });
-    // console.log('elim')
-    // Elimate duplicate tags
-    tags = _.uniq(tags);
 
-    // Make tag pages
+    tags = [...new Set(tags)];
+
     tags.forEach(tag => {
       createPage({
         path: `/tags/${_.kebabCase(tag)}/`,
