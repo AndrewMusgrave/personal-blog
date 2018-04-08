@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import debounce from 'lodash/debounce';
-import { SocialIcon } from 'react-social-icons';
+import {SocialIcon} from 'react-social-icons';
 import Logo from '../../assets/andrew bear_final.png';
 import {
   Link,
@@ -8,11 +8,9 @@ import {
   Heading,
   List,
   Button,
-  Portal,
-  Spinner,
   EventHandler,
   TextContainer,
-} from '../';
+} from '..';
 
 import './Nav.scss';
 
@@ -37,24 +35,24 @@ class Nav extends Component {
     // scroll
     // this.handleScroll = debounce(() => this.handleScrollEvent, 500, {trailing: true});
     // resize
-    this.handleScroll = debounce(this.handleScrollEvent, 50); // , {trailing: true}
+    this.handleScroll = debounce(this.handleScrollEvent, 50);
   }
 
   componentDidMount() {
     if (this.node != null) {
-      this.setState({ offsetTop: this.node.offsetHeight });
+      this.setState({offsetTop: this.node.offsetHeight});
     }
   }
 
   handleScrollEvent = () => {
     if (this.node != null) {
-      this.setState({ offsetTop: this.node.offsetHeight });
+      this.setState({offsetTop: this.node.offsetHeight});
     }
   };
 
   render() {
-    const { offsetTop } = this.state;
-    const { recentArticle } = this.props;
+    const {offsetTop} = this.state;
+    const {recentArticle} = this.props;
     const listMarkup = routeInfo && (
       <List
         items={routeInfo.map((route, ind) => <Link {...route} key={ind} />)}
@@ -97,11 +95,12 @@ class Nav extends Component {
     const headerBrandMarkup = (
       <div className="header-brand">
         {/* <Spinner /> */}
-        <img src={Logo} style={{ width: '2rem', marginRight: '5px' }} />
+        <img src={Logo} alt="logo" style={{width: '2rem', marginRight: '5px'}} />
         <a
-          style={{ color: 'inherit', textDecoration: 'none' }}
+          style={{color: 'inherit', textDecoration: 'none'}}
           href="http://www.andrewmusgrave.me"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {navHeadingMarkup}
         </a>
@@ -112,11 +111,11 @@ class Nav extends Component {
       <div className="social-media-icons">
         <SocialIcon
           url="https://twitter.com/"
-          style={{ height: '2rem', width: '2rem' }}
+          style={{height: '2rem', width: '2rem'}}
         />
         <SocialIcon
           url="https://github.com/"
-          style={{ height: '2rem', width: '2rem' }}
+          style={{height: '2rem', width: '2rem'}}
         />
       </div>
     );
@@ -131,8 +130,8 @@ class Nav extends Component {
     return (
       <React.Fragment>
         <EventHandler type="resize" callback={this.handleScroll} />
-        <div style={{ height: `${offsetTop}px` }} />
-        <div className={`navbar-wrapper`} ref={node => (this.node = node)}>
+        <div style={{height: `${offsetTop}px`}} />
+        <div className="navbar-wrapper" ref={node => (this.node = node)}>
           <div className="navbar">
             {headerMarkup}
             {navMarkup}

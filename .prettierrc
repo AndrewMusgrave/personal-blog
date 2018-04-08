@@ -7,4 +7,5 @@
   "tabWidth": 2,
   "jsxBracketSameLine": false,
   "parser": "babylon",
+  "object-curly-spacing": false,
 }

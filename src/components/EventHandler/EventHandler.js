@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class EventHandler extends Component {
+class EventHandler extends React.Component {
   componentDidMount() {
-    const { area, type, callback } = this.props;
+    const {type, callback} = this.props;
     window.addEventListener(type, callback);
   }
 
   componentWillUnmount() {
-    const { area, type, callback } = this.props;
+    const {type, callback} = this.props;
     window.removeEventListener(type, callback);
   }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Spinner.scss';
 
-const Spinner = () => {
+function Spinner() {
   return <div className="spinner" />;
 };
 

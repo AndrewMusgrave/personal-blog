@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card } from '../';
+import {Card} from '..';
 import './PostList.scss';
 
-const PostList = ({ items }) => {
+function PostList({items}) {
   const listMarkup =
     items &&
     items.map((item, ind) => (

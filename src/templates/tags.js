@@ -8,9 +8,9 @@ import {
   Button,
 } from '../components';
 
-const Tags = ({ pathContext, data }) => {
-  const { tag } = pathContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
+function Tags({pathContext, data}) {
+  const {tag} = pathContext;
+  const {edges, totalCount} = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`;
@@ -31,6 +31,7 @@ const Tags = ({ pathContext, data }) => {
 
 export default Tags;
 
+// eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(

@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link, Icon, Tag, Heading, TextContainer } from '../';
+import {Link, Tag, Heading, TextContainer} from '..';
 
 import './Card.scss';
 
-const Card = ({
+function Card({
   author,
-  avatar,
   excerpt,
   path,
   minutes,
   tags,
   title,
   date,
-}) => {
+}) {
   const headingMarkup = title &&
     path &&
     excerpt && (
@@ -24,9 +23,9 @@ const Card = ({
 
   const tagMarkup =
     tags &&
-    tags.map((tag, ind) => (
-      <Link to={`/tags/${tag}`}>
-        <Tag key={ind}>{tag}</Tag>
+    tags.map((tag) => (
+      <Link key={tag} to={`/tags/${tag}`}>
+        <Tag>{tag}</Tag>
       </Link>
     ));
 

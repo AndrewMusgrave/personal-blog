@@ -1,12 +1,11 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import ReactDisqusComments from 'react-disqus-comments';
-import { Heading, Container, TextContainer } from '../components';
+import {Heading, Container, TextContainer} from '../components';
 
 import '../styles/styles.scss';
 
-export default function Template({ data }) {
-  const { markdownRemark: post } = data;
+export default function Template({data}) {
+  const {markdownRemark: post} = data;
   return (
     <Container>
       <TextContainer>
@@ -29,6 +28,7 @@ export default function Template({ data }) {
   );
 }
 
+// eslint-disable-next-line no-undef
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

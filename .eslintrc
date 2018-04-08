@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+      "plugin:shopify/esnext",
+      "plugin:shopify/react",
+      "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-filename-extension": "off",
+    "react/button-has-type": "off",
+    "react/no-array-index-key": "off",
+    "react/prop-types": "off",
+    "react/no-did-mount-set-state": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-no-bind": "off",
+    "id-length": "off",
+    "sort-class-members/sort-class-members": "off"
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './List.scss';
 
-const Nav = ({ items, margin = true, type = 'row' }) => {
+function Nav({items, margin = true, type = 'row'}) {
   const listMarkup =
     items && items.map((item, ind) => <li key={ind}>{item}</li>);
 

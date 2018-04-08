@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Container,
-  Card,
   Heading,
   PostList,
   TextContainer,
@@ -9,14 +8,15 @@ import {
 
 import '../styles/styles.scss';
 
-const IndexPage = ({ data }) => {
+function IndexPage ({data}) {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Container>
       <div className="card-intro">
         <img
-          style={{ minHeight: '200px', minWidth: '200px' }}
+          alt="author"
+          style={{minHeight: '200px', minWidth: '200px'}}
           src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg"
           width="200"
           height="200"
@@ -38,6 +38,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
+// eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query indexPageQuery {
     allMarkdownRemark(

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Card, Heading, TextContainer } from '../components';
+import React, {Component} from 'react';
+import {Container, Card, Heading, TextContainer} from '../components';
 
 import '../styles/styles.scss';
 
@@ -21,13 +21,12 @@ class SearchPage extends Component {
 
   handleSearch = e => {
     clearTimeout(this.timer);
-    this.setState({ searchTerm: e.target.value });
+    this.setState({searchTerm: e.target.value});
     this.timer = setTimeout(this.triggerChange, WAIT_INTERVAL);
   };
 
   triggerChange = () => {
     this.fullTextSearch();
-    console.log('full text search');
   };
 
   handleKeyDown = e => {
@@ -37,9 +36,9 @@ class SearchPage extends Component {
   };
 
   fullTextSearch = () => {
-    const { searchTerm } = this.state;
-    const { edges } = this.props.data.allMarkdownRemark;
-    let results = [];
+    const {searchTerm} = this.state;
+    const {edges} = this.props.data.allMarkdownRemark;
+    const results = [];
     for (let i = 0; i < edges.length; i++) {
       const text = edges[i].node.html;
       const count = searchAllOccurances(text, searchTerm);
@@ -49,13 +48,12 @@ class SearchPage extends Component {
       }
     }
     const articles = results.sort((a, b) => b.count - a.count);
-    this.setState({ articles });
+    this.setState({articles});
   };
 
   render() {
-    const { searchTerm } = this.state;
-    const { data } = this.props;
-    const { articles } = this.state;
+    const {searchTerm} = this.state;
+    const {articles} = this.state;
 
     const postMarkup =
       articles &&
@@ -111,6 +109,7 @@ function removeHTML(html) {
   return html.replace(/<\/?[^>]+(>|$)|[().,:;?!]/g, '');
 }
 
+// eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query searchPageQuery {
     allMarkdownRemark(

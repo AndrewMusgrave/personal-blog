@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Heading.scss';
 
 function classNames(...props) {
   return props.filter(Boolean).join(' ');
 }
 
-const Heading = ({
+function Heading ({
   children,
   Element = 'h2',
   size = 'medium',
@@ -13,7 +13,7 @@ const Heading = ({
   spacing = false,
   spacingTop = false,
   screen,
-}) => {
+}) {
   const className = classNames(
     'heading',
     size === 'large' && 'headingLarge',
