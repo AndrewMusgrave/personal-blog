@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import kebabCase from "lodash/kebabCase";
-import Container from '../components/Container'
-import TextContainer from '../components/TextContainer'
+import kebabCase from 'lodash/kebabCase';
+import Container from '../components/Container';
+import TextContainer from '../components/TextContainer';
 import Heading from '../components/Heading';
-import Tag from '../components/Tag'
-import Link from '../components/Link'
+import Tag from '../components/Tag';
+import Link from '../components/Link';
 import '../styles/styles.scss';
 
 const TagsPage = ({
@@ -18,21 +18,18 @@ const TagsPage = ({
         Tags.
       </Heading>
     </TextContainer>
-      <ul className="tag-list">
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            <Tag>
-                {tag.fieldValue}
-            </Tag>
-              </Link>
-            ({tag.totalCount})
-          </li>
-        ))}
-      </ul>
+    <ul className="tag-list">
+      {group.map(tag => (
+        <li key={tag.fieldValue}>
+          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+            <Tag>{tag.fieldValue}</Tag>
+          </Link>
+          ({tag.totalCount})
+        </li>
+      ))}
+    </ul>
   </Container>
 );
-
 
 export default TagsPage;
 

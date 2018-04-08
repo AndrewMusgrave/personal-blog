@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import Container from '../components/Container'
-import Card from '../components/Card'
-import Heading from '../components/Heading'
+import React, { Component } from 'react';
+import Container from '../components/Container';
+import Card from '../components/Card';
+import Heading from '../components/Heading';
 import '../styles/styles.scss';
 import TextContainer from '../components/TextContainer';
 
@@ -14,62 +14,58 @@ class SearchPage extends Component {
 
     this.state = {
       searchTerm: '',
-    }
+    };
   }
 
   componentWillMount() {
     this.timer = null;
   }
 
-  handleSearch = (e) => {
+  handleSearch = e => {
     clearTimeout(this.timer);
-    this.setState({searchTerm: e.target.value});
+    this.setState({ searchTerm: e.target.value });
     this.timer = setTimeout(this.triggerChange, WAIT_INTERVAL);
-  }
+  };
 
   triggerChange = () => {
     this.fullTextSearch();
-    console.log('full text search')
-  }
+    console.log('full text search');
+  };
 
-  handleKeyDown = (e) => {
+  handleKeyDown = e => {
     if (e.keyCode === ENTER_KEY) {
       this.fullTextSearch();
     }
-  }
+  };
 
   fullTextSearch = () => {
-    const {searchTerm} = this.state;
-    const {edges} = this.props.data.allMarkdownRemark;
+    const { searchTerm } = this.state;
+    const { edges } = this.props.data.allMarkdownRemark;
     let results = [];
     for (let i = 0; i < edges.length; i++) {
-      const text =  edges[i].node.html;
+      const text = edges[i].node.html;
       const count = searchAllOccurances(text, searchTerm);
       if (count > 0) {
         edges[i].node.count = count;
-        results.push(edges[i].node)
+        results.push(edges[i].node);
       }
     }
-    const articles = results.sort((a,b) => b.count - a.count);
-    this.setState({articles})
-  }
+    const articles = results.sort((a, b) => b.count - a.count);
+    this.setState({ articles });
+  };
 
   render() {
-    const {searchTerm} = this.state;
-    const {data} = this.props;
-    const {articles} = this.state;
+    const { searchTerm } = this.state;
+    const { data } = this.props;
+    const { articles } = this.state;
 
-    const postMarkup = articles && (
+    const postMarkup =
+      articles &&
       articles.map((post, ind) => (
-          <li key={ind}>
-            <Card
-              excerpt={post.excerpt}
-              {...post.frontmatter}
-            />
-          </li>
-        )
-      )
-    )
+        <li key={ind}>
+          <Card excerpt={post.excerpt} {...post.frontmatter} />
+        </li>
+      ));
 
     return (
       <Container>
@@ -88,26 +84,24 @@ class SearchPage extends Component {
             />
           </TextContainer>
         </div>
-        <ul className="post-list">
-          {postMarkup}
-        </ul>
+        <ul className="post-list">{postMarkup}</ul>
       </Container>
-    )
+    );
   }
 }
 
 function countOccurances(text, searchWord) {
   let count = 0;
   let i;
-  for (i = 0; i < text.length; i++)
-		if (text[i] === searchWord)
-    	count++
-  return count
+  for (i = 0; i < text.length; i++) if (text[i] === searchWord) count++;
+  return count;
 }
 
 function searchAllOccurances(html, keywords) {
-  const text = removeHTML(html).toLowerCase().split(/\s+/);
-  const keywordArr = keywords.toLowerCase().split(" ");
+  const text = removeHTML(html)
+    .toLowerCase()
+    .split(/\s+/);
+  const keywordArr = keywords.toLowerCase().split(' ');
   let count = 0;
   let i;
   for (i = 0; i < keywordArr.length; i++)
@@ -116,7 +110,7 @@ function searchAllOccurances(html, keywords) {
 }
 
 function removeHTML(html) {
-  return html.replace(/<\/?[^>]+(>|$)|[().,:;?!]/g, "");
+  return html.replace(/<\/?[^>]+(>|$)|[().,:;?!]/g, '');
 }
 
 export const pageQuery = graphql`
@@ -124,8 +118,8 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: ASC }
-      filter: {  frontmatter: { published: { eq: true } } }
-      ) {
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       edges {
         node {
           html
@@ -142,6 +136,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default SearchPage
+export default SearchPage;

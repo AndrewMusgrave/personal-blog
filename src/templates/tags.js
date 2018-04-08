@@ -1,32 +1,29 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import Link from "../components/Link";
-import Container from '../components/Container'
-import TextContainer from "../components/TextContainer";
-import Heading from '../components/Heading'
-import PostList from '../components/PostList'
-import Button from '../components/Button'
+import Link from '../components/Link';
+import Container from '../components/Container';
+import TextContainer from '../components/TextContainer';
+import Heading from '../components/Heading';
+import PostList from '../components/PostList';
+import Button from '../components/Button';
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`;
   return (
     <Container>
       <TextContainer>
-        <Heading spacing Element='h1' size="large">{tagHeader}</Heading>
+        <Heading spacing Element="h1" size="large">
+          {tagHeader}
+        </Heading>
       </TextContainer>
-      <PostList
-        items={edges}
-      />
+      <PostList items={edges} />
       <Button>
-        <Link
-        to="/tags">
-          All tags
-        </Link>
+        <Link to="/tags">All tags</Link>
       </Button>
     </Container>
   );

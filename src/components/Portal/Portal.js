@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // loader error with reactDOM type canoot return null from functional component?
@@ -17,7 +17,7 @@ export default class Portal extends Component {
       while (!node) {
         setTimeout(() => {
           node = document.getElementById(this.props.id);
-        }, 10000)
+        }, 10000);
       }
     }
     if (!node) {
@@ -26,9 +26,6 @@ export default class Portal extends Component {
       document.body.appendChild(node);
     }
 
-    return ReactDOM.createPortal(
-      this.props.children,
-      node,
-    );
+    return ReactDOM.createPortal(this.props.children, node);
   }
 }
