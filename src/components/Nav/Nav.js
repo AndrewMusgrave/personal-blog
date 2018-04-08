@@ -9,6 +9,7 @@ import Button from '../Button'
 import Portal from '../Portal'
 import Spinner from '../Spinner'
 import EventHandler from '../EventHandler'
+import Logo from '../../assets/andrew bear_final.png';
 
 import TextContainer from '../TextContainer'
 import {SocialIcon} from 'react-social-icons'
@@ -85,7 +86,8 @@ class Nav extends Component {
 
     const headerBrandMarkup = (
       <div className="header-brand">
-        <Spinner />
+        {/* <Spinner /> */}
+        <img src={Logo} style={{width:'2rem', marginRight: '5px'}} />
         <a style={{color: 'inherit', textDecoration: 'none'}} href="http://www.andrewmusgrave.me" target="_blank">
           <Heading nav>
             Andrew M.

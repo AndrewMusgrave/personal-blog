@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
-$fontColor: #000000;
+@import '../../styles/shared.scss';
 
 .text-container {
   font-family: 'Josefin Sans', sans-serif;
-  color: $fontColor;
+  color: color(dark, darker);
 
   font-size: 1rem;
   font-weight: 400;

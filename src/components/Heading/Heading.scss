@@ -1,16 +1,12 @@
-// @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
 @import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
-// @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
-// $headingColor: #05386B;
-$headingColor: #349581;
-
+@import '../../styles/shared.scss';
 
 .heading {
   margin: 0;
   // font-family: 'Josefin Sans', sans-serif;
   font-family: 'Expletus Sans', cursive;
   // font-family: 'Merriweather Sans', sans-serif;
-  color: $headingColor;
+  color: color(green, dark);
   letter-spacing: .3rem;
 }
 
@@ -34,7 +30,7 @@ $headingColor: #349581;
 }
 
 .nav-header {
-  color: #04396a;
+  color: color(blue);
 }
 
 .spacing-header {

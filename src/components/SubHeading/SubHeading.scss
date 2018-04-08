@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
-$headingColor: #05386B;
+@import '../../styles/shared.scss';
 
 .heading {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
-  color: $headingColor;
+  color: color(blue, dark);
   letter-spacing: .3rem;
 }
 

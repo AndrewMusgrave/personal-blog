@@ -1,10 +1,9 @@
-$baseColor: #04396a;
-$baseOutline: #83e5af;
+@import '../../styles/shared.scss';
 
 .Tag {
   display: inline-block;
-  border: 1px solid $baseOutline;
-  color: $baseColor;
+  border: 1px solid color(green, lighter);
+  color: color(blue);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;

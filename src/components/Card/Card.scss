@@ -1,5 +1,4 @@
-$excerptFontColor: #04396a;
-$baseOutline: #83e5af;
+@import '../../styles/shared.scss';
 
 article {
   width: 100%;
@@ -15,7 +14,7 @@ article {
 .card-personal {
   margin-top: .4rem;
   line-height: 1.2;
-  color: $excerptFontColor;
+  color: color(blue);
 
   display: flex;
   justify-content: space-between;
@@ -25,7 +24,7 @@ article {
 .excerpt {
   font-size: .8rem;
   font-weight: 300;
-  color: #333;
+  color: color(dark);
 }
 
 .card-details {
@@ -39,7 +38,7 @@ article {
 .card-dot {
   font-size: 1rem;
   // color: #5c5c5c;
-  color: $baseOutline;
+  color: color(green, lighter);
 }
 
 .tag-container {
