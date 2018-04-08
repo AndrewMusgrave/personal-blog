@@ -3,7 +3,6 @@
 article {
   width: 100%;
   text-align: left;
-  // border: 1px black solid;
   margin-bottom: 2rem;
 }
 
@@ -37,7 +36,6 @@ article {
 
 .card-dot {
   font-size: 1rem;
-  // color: #5c5c5c;
   color: color(green, lighter);
 }
 
@@ -59,9 +57,3 @@ article {
       justify-content: flex-end;
   }
 }
-
-// @media (min-width: 768px) {
-//   .tagContainer {
-//     max-width: 720px;
-//   }
-// }

@@ -5,7 +5,6 @@ import Card from '../components/Card'
 import Heading from '../components/Heading'
 import '../styles/styles.scss';
 import TextContainer from '../components/TextContainer';
-import TextSearch from '../components/TextSearch';
 
 const WAIT_INTERVAL = 500;
 const ENTER_KEY = 13;
@@ -112,7 +111,7 @@ function searchAllOccurances(html, keywords) {
   const keywordArr = keywords.toLowerCase().split(" ");
   let count = 0;
   let i;
-  for (i = 0; i < keywordArr.length; i++) 
+  for (i = 0; i < keywordArr.length; i++)
     count += countOccurances(text, keywordArr[i]);
   return count;
 }

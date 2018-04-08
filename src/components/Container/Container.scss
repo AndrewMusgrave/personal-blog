@@ -1,3 +1,5 @@
+@import '../../styles/shared.scss';
+
 html {
   box-sizing: border-box;
 }
@@ -15,25 +17,12 @@ body {
 .mediumContainer,
 .largeContainer,
 .extraLargeContainer {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
-
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
-
-// .smallContainer {
-//   max-width:  540px!important;
-// }
-
-// .mediumContainer {
-//   max-width:  720px!important;
-// }
 
 @media (min-width: 576px) {
   .container,

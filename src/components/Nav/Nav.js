@@ -84,14 +84,23 @@ class Nav extends Component {
       </nav>
     )
 
+    const navHeadingMarkup = (
+      <React.Fragment>
+        <Heading nav screen="web">
+          Programming Paradigms.
+        </Heading>
+        <Heading nav screen="mobile">
+          P.P.
+        </Heading>
+      </React.Fragment>
+    )
+
     const headerBrandMarkup = (
       <div className="header-brand">
         {/* <Spinner /> */}
         <img src={Logo} style={{width:'2rem', marginRight: '5px'}} />
         <a style={{color: 'inherit', textDecoration: 'none'}} href="http://www.andrewmusgrave.me" target="_blank">
-          <Heading nav>
-            Andrew M.
-          </Heading>
+          {navHeadingMarkup}
         </a>
       </div>
     )
