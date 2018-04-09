@@ -4,6 +4,7 @@ title: 'Be a Pal, My Dudes'
 published: true
 date: '2017-11-23'
 author: 'James Willis'
+tags: ["be", "a", "pal", "my", "dudes"]
 minutes: '4'
 ---
 
@@ -13,51 +14,30 @@ So, we run a [workshop](google.com) to help women reduce the impact of gender bi
 
 The longer answer is, we’re working on it.
 
-### A few specific ideas for being a good ally
-
 In the meantime, I know there are a lot of men out there right now with good intentions who want to help change things, but it’s not always clear which actions are most helpful. And asking the people who are already doing extra work to do the additional work of teaching you how to help them do less work is…annoying. This is true for anyone who has more privilege in any given situation. Do your part to make it easier.
 
-***
+![alttext](https://cdn-images-1.medium.com/max/800/1*7iVk_As1gKmrFo3e6E9qPg.png)
+<figcaption>Don’t be this guy. Why would anyone want to be this guy?</figcaption>
 
-In the meantime, I know there are a lot of men out there right now with good intentions who want to help change things, but it’s not always clear which actions are most helpful. And asking the people who are already doing extra work to do the additional work of teaching you how to help them do less work is…annoying
+So, based on what we’ve heard in our workshops, conversations with colleagues, and straight-up asking Twitter, here are a few very specific helpful actions you can take. Many of these you’ve probably heard before. If we keep repeating, maybe they’ll stick. We all know the right thing to do, it’s cultivating a habit of doing the right thing in the moment that is so hard.
 
-![This is a caption](https://images.unsplash.com/photo-1506269351850-0428eaed2193?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a1512d7659e4817df8217cdb9aa09d7a&auto=format&fit=crop&w=1350&q=80)
-<figcaption>Text bloe image with links <a href="https://www.google.com">Test</a></figcaption>
+(Note: This list is just a starting point, and I’ve focused on peer-level actions, not management. I’ll probably make some edits and amendments and will definitely write more on this topic. Thanks to everyone weighing in!)
 
-```css
-#header h1 a {
-  display: block!important;
-  width: 300px;
-  height: 80px;
-}
-```
+## Listen to women
+This is fundamental on all levels. Listen to the individual woman who is talking to you. Assume she knows what she is talking about. Listen to the collective voices of women saying there is a problem. Stifle any urge to respond defensively. Don’t try to guess what they’re about to say. Just listen.
 
-```jsx
-car.table
-const table = me;
-table = 5;
-function test() {
+And don’t interrupt.
 
-}
-3453 + 2134 / = 100
-class Test extends Component {
-  test() {
-    const me = you;
-    return (
-      <yolo></yolo>
-    );
-  }
+## Create space for women to speak
+“The research suggests that, in groups, men tend to get and keep the floor more often than women, talk more often and for longer, interrupt more, and make different kinds of contributions, using language strategies that challenge, create and maintain status distinctions (i.e. they create and maintain asymmetrical alignments between themselves and interlocutors).”
 
-  render() {
-    return (
-      me
-    )
-  }
-}
-// hello
-/** 
- * Hello
-*/
+—“Gender and Language in the Workplace” by Shari Kendall and Deborah Tannen
+
+When you are speaking, you can help just by getting to your point faster. This helps everyone, really.
+
+For bonus points, start paying attention in meetings and listen for men using far more words than necessary. Logorrhea is not necessarily a conscious move, and often comes from insecurity. Truly confident people are succinct.
+
+
 ```
 
 

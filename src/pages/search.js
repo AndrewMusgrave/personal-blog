@@ -40,7 +40,7 @@ class SearchPage extends Component {
     const {edges} = this.props.data.allMarkdownRemark;
     const results = [];
     for (let i = 0; i < edges.length; i++) {
-      const text = edges[i].node.html;
+      const text = edges[i].node.html + edges[i].node.frontmatter.title;
       const count = searchAllOccurances(text, searchTerm);
       if (count > 0) {
         edges[i].node.count = count;

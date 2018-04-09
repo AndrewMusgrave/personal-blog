@@ -17,13 +17,15 @@ export default function Template({data}) {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </TextContainer>
-      {/* <ReactDisqusComments
+      <ReactDisqusComments
         shortname="example"
         identifier="something-unique-12345"
         title="Example Thread"
         url="http://www.example.com/example-thread12311421412313"
         category_id="2343241231"
-        onNewComment={() => {console.log('hmm')}}/> */}
+        onNewComment={() => {console.log('hmm')}}
+        style={{marginTop: '2rem'}}
+      />
     </Container>
   );
 }

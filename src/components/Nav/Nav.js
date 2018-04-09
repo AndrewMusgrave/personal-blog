@@ -96,14 +96,11 @@ class Nav extends Component {
       <div className="header-brand">
         {/* <Spinner /> */}
         <img src={Logo} alt="logo" style={{width: '2rem', marginRight: '5px'}} />
-        <a
-          style={{color: 'inherit', textDecoration: 'none'}}
-          href="http://www.andrewmusgrave.me"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/"
         >
           {navHeadingMarkup}
-        </a>
+        </Link>
       </div>
     );
 

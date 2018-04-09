@@ -1,11 +1,18 @@
+const config = require('./config/config');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Programming Paradigms`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-next`,
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {trackingId: config.googleAnalyticsId
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,4 +36,4 @@ module.exports = {
       },
     },
   ],
-}
+};
