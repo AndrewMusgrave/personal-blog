@@ -1,4 +1,4 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  googleAnalyticsId: 'test',
+  googleAnalyticsId: 'UA-117107643-1',
 };
