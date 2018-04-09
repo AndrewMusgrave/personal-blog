@@ -5,6 +5,27 @@ $spaces: (
   loose: 1.7,
 );
 
+/*
+Margin / padding used
+Need to standardize it
+-3px
+5px
+-5px
+15px
+0
+.3rem
+.4rem
+.6rem
+.7rem
+1rem
+1.2rem
+2rem
+-1.3em
+.75rem
+1.7rem
+1.7rem
+*/
+
 @function spacing($space: base) {
   @return map-get($spaces, $space)
 }
