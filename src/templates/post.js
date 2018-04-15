@@ -45,6 +45,7 @@ export default class Template extends Component {
 
   render() {
     // Possible undefined?
+    console.log(this.props);
     const {markdownRemark: post} = this.props.data;
     const {comments, loading} = this.state;
     const commentsMarkup = loading
