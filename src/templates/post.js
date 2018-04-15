@@ -45,8 +45,7 @@ export default class Template extends Component {
 
   render() {
     console.log(this.props.markdownRemark);
-    const {markdownRemark = {}} = this.props.data;
-    const {post} = markdownRemark;
+    const {markdownRemark: post} = this.props.data;
     const {comments, loading} = this.state;
     const commentsMarkup = loading
       ? <Spinner />

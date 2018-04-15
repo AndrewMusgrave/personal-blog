@@ -36,11 +36,11 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     const posts = res.data.allMarkdownRemark.edges;
 
-    posts.forEach(async ({node}) => {
-      await axios.post(`https://programming-paradigms-api.herokuapp.com/api/post/`, {
-          title: node.frontmatter.title,
-          identifier: node.frontmatter.identifier,
-      }).catch(err => console.log(`Unable to create post comment section: ${err}`));
+    posts.forEach(({node}) => { // async
+      // await axios.post(`https://programming-paradigms-api.herokuapp.com/api/post/`, {
+      //     title: node.frontmatter.title,
+      //     identifier: node.frontmatter.identifier,
+      // }).catch(err => console.log(`Unable to create post comment section: ${err}`));
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
