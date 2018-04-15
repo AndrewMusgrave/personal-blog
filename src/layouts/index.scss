@@ -7,3 +7,8 @@ body {
   background-color: color(light);
   color: color(blue, dark);
 }
+
+html, body, #___gatsby, #template-wrapper {
+  height: 100%;
+  position: relative;
+}

@@ -4,6 +4,7 @@ title: 'Be a Pal, My Dudes'
 published: true
 date: '2017-11-23'
 author: 'James Willis'
+identifier: 'asdw234643435dsa09c9j1'
 tags: ["be", "a", "pal", "my", "dudes"]
 minutes: '4'
 ---

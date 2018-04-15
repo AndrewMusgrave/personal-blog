@@ -4,6 +4,7 @@ title: 'How to avoid (or escape) async/await hell'
 published: true
 date: '2020-11-24'
 author: 'Adtiya Agarwal'
+identifier: '35gsqzSDw324Fsad'
 minutes: '4'
 tags: ["javascript", "es6", "neat", "paradigm"]
 ---
