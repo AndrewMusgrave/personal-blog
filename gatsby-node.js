@@ -37,7 +37,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     const posts = res.data.allMarkdownRemark.edges;
 
     posts.forEach(async ({node}) => {
-      axios.post(`https://programming-paradigms-api.herokuapp.com/api/post/`, {
+      await axios.post(`https://programming-paradigms-api.herokuapp.com/api/post/`, {
           title: node.frontmatter.title,
           identifier: node.frontmatter.identifier,
       }).catch(err => console.log(`Unable to create post comment section: ${err}`));
