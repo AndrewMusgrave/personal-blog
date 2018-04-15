@@ -3,15 +3,16 @@ import {Link} from '..';
 
 import './Button.scss';
 
-function Button({children, onClick, to}){
+function Button({children, onClick, to, full}){
+  const spacingVar = full ? 'btn-full' : '';
   return to ? (
     <Link to={to}>
-      <button className="button" onClick={onClick}>
+      <button className={`button ${spacingVar}`} onClick={onClick}>
         {children}
       </button>
     </Link>
   ) : (
-    <button className="button" onClick={onClick}>
+    <button className={`button ${spacingVar}`} onClick={onClick}>
       {children}
     </button>
   );

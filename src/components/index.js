@@ -12,3 +12,8 @@ export {default as PostList} from './PostList';
 export {default as Spinner} from './Spinner';
 export {default as Tag} from './Tag';
 export {default as TextContainer} from './TextContainer';
+export {default as Comments} from './Comments';
+export {default as Comment} from './Comment';
+export {default as Divider} from './Divider';
+export {default as Footer} from './Footer';
+export {default as TextInput} from './TextInput';

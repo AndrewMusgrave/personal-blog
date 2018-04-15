@@ -47,7 +47,7 @@ export const pageQuery = graphql`
             title
             path
             minutes
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             tags
             author
             avatar

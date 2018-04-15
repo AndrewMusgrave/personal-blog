@@ -1,33 +1,74 @@
-import React from 'react';
-import ReactDisqusComments from 'react-disqus-comments';
-import {Heading, Container, TextContainer} from '../components';
+import React, {Component, Fragment} from 'react';
+import axios from 'axios';
+import {Heading, Container, TextContainer, Spinner, Comments, Footer} from '../components';
 
 import '../styles/styles.scss';
 
-export default function Template({data}) {
-  const {markdownRemark: post} = data;
-  return (
-    <Container>
-      <TextContainer>
-        <Heading Element="h1" size="large" spacingTop>
-          {post.frontmatter.title}
-        </Heading>
-        <div
-          className="blog-post"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </TextContainer>
-      <ReactDisqusComments
-        shortname="example"
-        identifier="something-unique-12345"
-        title="Example Thread"
-        url="http://www.example.com/example-thread12311421412313"
-        category_id="2343241231"
-        onNewComment={() => {console.log('hmm')}}
-        style={{marginTop: '2rem'}}
-      />
-    </Container>
-  );
+export default class Template extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: false,
+      comments: [],
+      _id: null,
+    };
+  }
+
+  componentDidMount() {
+    const {identifier} = this.props.data.markdownRemark.frontmatter;
+    this.setState({loading: true});
+    axios.get(`https://programming-paradigms-api.herokuapp.com/api/comments/${identifier}`)
+      .then((response) => {
+        this.setState({comments: response.data.comments, loading: false, _id: response.data._id})
+      })
+      .catch((error) => console.log('Error grabbing comments : ', error))
+  }
+
+  handleSubmit = (name, comment) => {
+    const {_id} = this.state;
+
+    if (_id) {
+      axios.post(`https://programming-paradigms-api.herokuapp.com/api/comment/`, {
+        name,
+        comment,
+        _id,
+      })
+      .then(response => {
+        const {comments} = this.state;
+        comments.push(response.data);
+        this.setState({comments})
+      })
+      .catch(err => console.log(err))
+    };
+  };
+
+  render() {
+    // Possible undefined?
+    const {markdownRemark: post} = this.props.data;
+    const {comments, loading} = this.state;
+    const commentsMarkup = loading
+      ? <Spinner />
+      : <Comments onSubmit={this.handleSubmit}  comments={comments} />;
+
+    return (
+      <Fragment>
+        <Container>
+          <TextContainer>
+            <Heading Element="h1" size="large" spacingTop>
+              {post.frontmatter.title}
+            </Heading>
+            <div
+              className="blog-post"
+              dangerouslySetInnerHTML={{__html: post.html}}
+            />
+          </TextContainer>
+          {commentsMarkup}
+        </Container>
+        <Footer />
+      </Fragment>
+    );
+  }
 }
 
 // eslint-disable-next-line no-undef
@@ -38,6 +79,7 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        identifier
       }
     }
   }

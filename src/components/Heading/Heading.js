@@ -11,7 +11,9 @@ function Heading ({
   size = 'medium',
   nav = false,
   spacing = false,
+  spacingNone = false,
   spacingTop = false,
+  spacingBottom = false,
   screen,
 }) {
   const className = classNames(
@@ -19,11 +21,14 @@ function Heading ({
     size === 'large' && 'headingLarge',
     size === 'medium' && 'headingMedium',
     size === 'small' && 'headingSmall',
+    size === 'extra-small' && 'headingExtraSmall',
     screen === 'web' && 'headingWeb',
     screen === 'mobile' && 'headingMobile',
     nav && 'nav-header',
     spacing && 'spacing-header',
+    spacingNone && 'spacing-none',
     spacingTop && 'spacing-top-header',
+    spacingBottom && 'spacing-bottom-header',
   );
 
   return <Element className={className}>{children}</Element>;

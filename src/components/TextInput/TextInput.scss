@@ -1,0 +1,29 @@
+@import '../../layouts/index.scss';
+@import '../../styles/shared.scss';
+
+.search-input {
+  margin-bottom: 0.75em;
+  width: 100%;
+
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid color(light, light);
+  color: color(blue);
+  font-family: inherit;
+  font-size: 1rem;
+  height: 3rem;
+  transition: border-color 0.3s;
+  width: 100%;
+  margin-bottom: 1.7rem;
+
+  &:focus,
+  &:active {
+    border-bottom: 2px solid color(light, dark);
+    outline: none;
+  }
+
+}
+
+.input-center {
+  text-align: center;
+}

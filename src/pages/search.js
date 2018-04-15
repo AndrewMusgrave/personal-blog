@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Card, Heading, TextContainer} from '../components';
+import {Container, Card, Heading, TextContainer, TextInput} from '../components';
 
 import '../styles/styles.scss';
 
@@ -64,24 +64,22 @@ class SearchPage extends Component {
       ));
 
     return (
+        // <div style={{height: '100%'}}>
       <Container>
-        <div>
           <TextContainer>
             <Heading Element="h1" size="large" spacing>
               search my blog.
             </Heading>
-            <input
-              className="search-input"
-              type="text"
+            <TextInput
               value={searchTerm}
               onChange={this.handleSearch}
               onKeyDown={this.handleKeyDown}
               placeholder="React..."
             />
           </TextContainer>
-        </div>
         <ul className="post-list">{postMarkup}</ul>
       </Container>
+        // </div>
     );
   }
 }
@@ -126,7 +124,7 @@ export const pageQuery = graphql`
             title
             path
             author
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             tags
           }
         }

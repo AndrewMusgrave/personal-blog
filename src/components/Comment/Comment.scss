@@ -1,0 +1,18 @@
+@import '../../layouts/index.scss';
+@import '../../styles/shared.scss';
+
+.blog-comment {
+  // border: 1px color(blue) solid;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow:0 1px 4px rgba(0,0,0,.23);
+  margin-bottom: 1.3rem;
+  padding: 15px;
+  color: color(dark);
+}
+
+.comment-date {
+  align-self: flex-end;
+}

@@ -1,10 +1,13 @@
 .spinner {
   min-height: 2rem;
   min-width: 2rem;
+  max-height: 2rem;
+  max-width: 2rem;
   border: 2px solid #ddd;
   border-top-color: #c4ffdb;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  margin: .7rem auto;
 }
 
 @keyframes spin {

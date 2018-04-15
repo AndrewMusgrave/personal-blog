@@ -26,6 +26,12 @@
   line-height: 2.3rem;
 }
 
+.headingExtraSmall {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+
 .nav-header {
   color: color(blue);
 }
@@ -36,6 +42,14 @@
 
 .spacing-top-header {
   padding: 1.2rem 0 0 0;
+}
+
+.spacing-bottom-header {
+  padding: 0 0 1.2rem 0;
+}
+
+.spacing-none {
+  padding: 0;
 }
 
 .headingMobile {
