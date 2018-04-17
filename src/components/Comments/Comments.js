@@ -30,7 +30,8 @@ class Comments extends Component {
     };
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault();
     const {name, comment} = this.state;
     const {onSubmit} = this.props;
     this.setState({name: '', comment: ''}, () => onSubmit(name, comment));
@@ -38,7 +39,7 @@ class Comments extends Component {
 
   render() {
     const {name, comment, height} = this.state;
-    const {comments} = this.props;
+    const {comments, error} = this.props;
     const commentsMarkup = comments &&
       comments.map(
         (blogComment, index) =>(
@@ -50,6 +51,10 @@ class Comments extends Component {
           />
         ));
 
+    const errorMarkup = error && (
+      <span className="text-error">{error}</span>
+    )
+
     return (
       <div className="comments-wrapper">
         <Divider />
@@ -60,31 +65,31 @@ class Comments extends Component {
         </TextContainer>
         <form className="input-wrapper">
           <div className="input-wrapper">
-          <input
-            placeholder="Name"
-            className="name-input"
-            value={name}
-            onChange={this.handleTextChange('name')}
-          />
-          <textarea
-            style={{height: `${height}px`}}
-            placeholder="Message"
-            className="comment-section"
-            value={comment}
-            onChange={this.handleTextChange('comment')}
-          />
-
-          <div className="measure-textarea" ref={node => this.measureRef = node}>
-            <div className="measure-div">
-              <br />
-              <br />
-              <br />
-              S
-              {comment}
+            <input
+              placeholder="Name"
+              className="name-input"
+              value={name}
+              onChange={this.handleTextChange('name')}
+            />
+            <textarea
+              style={{height: `${height}px`}}
+              placeholder="Message"
+              className="comment-section"
+              value={comment}
+              onChange={this.handleTextChange('comment')}
+            />
+            {errorMarkup}
+            <div className="measure-textarea" ref={node => this.measureRef = node}>
+              <div className="measure-div">
+                <br />
+                <br />
+                <br />
+                S
+                {comment}
+              </div>
             </div>
           </div>
-        </div>
-          <button type="submit" onClick={() => this.handleSubmit()} className="btn-submitt">Submit</button>
+          <button type="submit" onClick={this.handleSubmit} className="btn-submitt">Submit</button>
         </form>
         {commentsMarkup}
       </div>

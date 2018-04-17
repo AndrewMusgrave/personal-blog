@@ -66,17 +66,17 @@ class SearchPage extends Component {
     return (
         // <div style={{height: '100%'}}>
       <Container>
-          <TextContainer>
-            <Heading Element="h1" size="large" spacing>
-              search my blog.
-            </Heading>
-            <TextInput
-              value={searchTerm}
-              onChange={this.handleSearch}
-              onKeyDown={this.handleKeyDown}
-              placeholder="React..."
-            />
-          </TextContainer>
+        <TextContainer>
+          <Heading Element="h1" size="large" spacing>
+            search my blog.
+          </Heading>
+          <TextInput
+            value={searchTerm}
+            onChange={this.handleSearch}
+            onKeyDown={this.handleKeyDown}
+            placeholder="React..."
+          />
+        </TextContainer>
         <ul className="post-list">{postMarkup}</ul>
       </Container>
         // </div>

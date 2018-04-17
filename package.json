@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "programming-paradigms",
+  "description": "Personal blog",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrew Musgrave",
   "dependencies": {
     "axios": "^0.18.0",
-    "gatsby": "^1.9.241",
+    "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-google-analytics": "^1.0.28",
     "gatsby-plugin-react-helmet": "^2.0.8",
@@ -14,9 +14,7 @@
     "gatsby-remark-prismjs": "^1.2.21",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.39",
-    "gh-pages": "^1.1.0",
     "lodash": "^4.17.5",
-    "react-disqus-comments": "^1.1.1",
     "react-helmet": "^5.2.0",
     "react-social-icons": "^2.8.1"
   },

@@ -9,18 +9,18 @@ export default class Template extends Component {
     super(props);
 
     this.state = {
-      loading: false,
+      loading: true,
       comments: [],
       _id: null,
+      error: '',
     };
   }
 
   componentDidMount() {
     const {identifier} = this.props.data.markdownRemark.frontmatter;
-    this.setState({loading: true});
     axios.get(`https://programming-paradigms-api.herokuapp.com/api/comments/${identifier}`)
       .then((response) => {
-        this.setState({comments: response.data.comments, loading: false, _id: response.data._id})
+        this.setState({comments: response.data.comments, loading: false, _id: response.data._id});
       })
       .catch((error) => console.log('Error grabbing comments : ', error))
   }
@@ -29,27 +29,30 @@ export default class Template extends Component {
     const {_id} = this.state;
 
     if (_id) {
-      axios.post(`https://programming-paradigms-api.herokuapp.com/api/comment/`, {
-        name,
-        comment,
-        _id,
-      })
-      .then(response => {
-        const {comments} = this.state;
-        comments.push(response.data);
-        this.setState({comments})
-      })
-      .catch(err => console.log(err))
+      if (comment) {
+        axios.post(`https://programming-paradigms-api.herokuapp.com/api/comment/`, {
+          name,
+          comment,
+          _id,
+        })
+        .then(response => {
+          const {comments} = this.state;
+          comments.push(response.data);
+          this.setState({comments, error: ''});
+        })
+        .catch(err => this.setState({error: 'An error has occured posting your comment.'}));
+        return;
+      }
+      this.setState({error: 'Please enter a comment and submit again, thank you.'});
     };
   };
 
   render() {
-    // Possible undefined?
     const {markdownRemark: post} = this.props.data;
-    const {comments, loading} = this.state;
+    const {comments, loading, error} = this.state;
     const commentsMarkup = loading
       ? <Spinner />
-      : <Comments onSubmit={this.handleSubmit}  comments={comments} />;
+      : <Comments onSubmit={this.handleSubmit}  comments={comments} error={error} />;
 
     return (
       <Fragment>
