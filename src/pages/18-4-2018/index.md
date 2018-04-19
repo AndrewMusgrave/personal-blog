@@ -25,10 +25,6 @@ Efficiency. The majority of array methods have a time complexity of o(n) where a
 
 The core methods of a stack are push and pop. Some common helper methods I’ve chosen to include are: toString, peek and isEmpty.
 
-## What will our stack include?
-
-The core methods of a stack are push and pop. Some common helper methods I’ve chosen to include are: toString, peek and isEmpty.
-
 1. push(element): void – Adds the element to the top of the stack
 2. pop(): element – Removes the element from the top of the stack
 3. peek(): element – Reveals the element from the top of the stack
@@ -37,17 +33,17 @@ The core methods of a stack are push and pop. Some common helper methods I’ve 
 
 ```js
 class Stack {
-	constructor(items) {
+	constructor(elements) {
   	// Provided array or empty array
-  	this.items = items || [];
+  	this.elements = elements || [];
     // Provided array length or zero
-    this.size = (items && items.length) || 0;
+    this.size = (elements && elements.length) || 0;
   }
 
   // Adds the element to the top of the stack and increment
-  push(item) {
+  push(element) {
     this.size++;
-  	this.items.push(item);
+  	this.elements.push(element);
   }
 
   // Returns null if the array is empty otherwise
@@ -57,13 +53,13 @@ class Stack {
     	return null;
 
   	this.size--;
-    return this.items.pop();
+    return this.elements.pop();
   }
 
   // If array is not empty return the first element
   peek() {
   	return Boolean(this.size)
-    	? this.items[this.size - 1]
+    	? this.elements[this.size - 1]
       : null;
   }
 
@@ -74,7 +70,7 @@ class Stack {
 
   // Returns the contents of the list
   toString() {
-  	return this.items.reduce((acc, item) => acc += `${item}\n`, '')
+  	return this.elements.reduce((a, e) => a += `${e}\n`, '')
   }
 }
 
