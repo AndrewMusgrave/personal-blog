@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import Helmet from 'react-helmet';
 import axios from 'axios';
 import {Heading, Container, TextContainer, Spinner, Comments, Footer} from '../components';
 
@@ -37,7 +38,7 @@ export default class Template extends Component {
         })
         .then(response => {
           const {comments} = this.state;
-          comments.push(response.data);
+          comments.unshift(response.data);
           this.setState({comments, error: ''});
         })
         .catch(err => this.setState({error: 'An error has occured posting your comment.'}));
@@ -56,6 +57,12 @@ export default class Template extends Component {
 
     return (
       <Fragment>
+        <Helmet
+          title={`${post.frontmatter.title} - Programming Paradigms`}
+          meta={[
+            {name: 'description', content: post.excerpt},
+          ]}
+        />
         <Container>
           <TextContainer>
             <Heading Element="h1" size="large" spacingTop>
@@ -79,6 +86,7 @@ export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       frontmatter {
         path
         title
