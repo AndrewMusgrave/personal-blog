@@ -38,7 +38,7 @@ export default class Template extends Component {
         })
         .then(response => {
           const {comments} = this.state;
-          comments.push(response.data);
+          comments.unshift(response.data);
           this.setState({comments, error: ''});
         })
         .catch(err => this.setState({error: 'An error has occured posting your comment.'}));
