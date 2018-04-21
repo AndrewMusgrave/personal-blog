@@ -11,4 +11,12 @@
   margin: 5px;
 
   font-size: .9rem;
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: color(teal, darkest);
+    border-color: color(teal, darkest);
+    color: color(teal);
+  }
 }

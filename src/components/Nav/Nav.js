@@ -64,7 +64,7 @@ class Nav extends Component {
         <Link to="search">
           <Icon src="search" />
         </Link>
-        <Button to={recentArticle}>Recent article</Button>
+        <Button nav to={recentArticle}>Recent article</Button>
       </div>
     );
 

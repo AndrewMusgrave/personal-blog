@@ -8,6 +8,7 @@ identifier: '23ff4f77dsf0sd0v8d8SDWd934h'
 tags: ["medium", "interview", "realife"]
 keywords: ["first", "post", "react", "js", "first", "post", "react", "js"]
 minutes: '3'
+image: 'https://images.unsplash.com/photo-1500577329392-f0af6d7dd827?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=00833a7550843e83a90924c865440d7f&auto=format&fit=crop&w=701&q=80'
 ---
 
 ![Hands](https://cdn-images-1.medium.com/max/800/1*Uwbv9Nzv7uoZV_hJwrsPGQ.jpeg)

@@ -51,13 +51,31 @@ export default class Template extends Component {
       ? <Spinner />
       : <Comments onSubmit={this.handleSubmit}  comments={comments} />;
 
+    const imageMarkup = post.frontmatter.image && (
+      <img
+        src={post.frontmatter.image}
+        alt="post header"
+        className="post-image"
+      />
+    );
+
     return (
-      <Fragment>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Container>
+          <Heading Element="h1" size="large" spacingTop>
+            {post.frontmatter.title}
+          </Heading>
+        </Container>
+        {imageMarkup}
         <Container>
           <TextContainer>
-            <Heading Element="h1" size="large" spacingTop>
-              {post.frontmatter.title}
-            </Heading>
             <div
               className="blog-post"
               dangerouslySetInnerHTML={{__html: post.html}}
@@ -66,7 +84,7 @@ export default class Template extends Component {
           {commentsMarkup}
         </Container>
         <Footer />
-      </Fragment>
+      </div>
     );
   }
 }
@@ -80,6 +98,7 @@ export const postQuery = graphql`
         path
         title
         identifier
+        image
       }
     }
   }

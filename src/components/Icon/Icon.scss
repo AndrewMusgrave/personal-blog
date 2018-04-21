@@ -7,6 +7,10 @@
   &.fa {
     font-size: 1.3rem;
   }
+
+  &:hover {
+    color: color(teal, darkest)!important;
+  }
 }
 
 .fa {

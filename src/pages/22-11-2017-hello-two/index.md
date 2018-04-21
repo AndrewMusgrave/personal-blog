@@ -7,6 +7,7 @@ author: 'James Willis'
 identifier: 'asdw234643435dsa09c9j1'
 tags: ["be", "a", "pal", "my", "dudes"]
 minutes: '4'
+image: 'https://images.unsplash.com/photo-1433769614376-f7231cd16a55?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6db43fbcbf37741adf0cedcd36bd4e80&auto=format&fit=crop&w=1350&q=80'
 ---
 
 ## A few specific ideas for being a good ally

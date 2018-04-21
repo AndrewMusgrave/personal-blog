@@ -11,6 +11,7 @@ function Card({
   tags,
   title,
   date,
+  image
 }) {
   const headingMarkup = title &&
     path &&
@@ -45,13 +46,24 @@ function Card({
       </div>
     );
 
+    const imageMarkup = image && (
+      <img
+        className="card-image"
+        alt="post img"
+        src={image}
+      />
+    );
+
   return (
-    <TextContainer>
-      <article>
-        {headingMarkup}
-        {personal}
-      </article>
-    </TextContainer>
+    <React.Fragment>
+      {imageMarkup}
+      <TextContainer>
+        <article>
+          {headingMarkup}
+          {personal}
+        </article>
+      </TextContainer>
+    </React.Fragment>
   );
 };
 

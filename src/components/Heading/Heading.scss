@@ -13,7 +13,7 @@
 .headingLarge {
   font-size: 2rem;
   font-weight: 600;
-  line-height: 3.4rem;
+  line-height: 2.6rem;
 }
 
 .headingMedium {
@@ -61,6 +61,12 @@
 
 .headingWeb {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .headingLarge {
+    line-height: 3.4rem;
+  }
 }
 
 @media (min-width: 768px) {
