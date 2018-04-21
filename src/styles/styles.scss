@@ -32,7 +32,8 @@
   flex-direction: column;
 
   font-family: 'Josefin Sans', sans-serif;
-  color: color(dark);
+  // color: color(dark);
+  color: color(black, lighter);
 
   font-size: 1rem;
   font-weight: 400;
@@ -85,7 +86,8 @@
   }
 
   h2, h3, h4, h5, h6 {
-    color: color(blue);
+    // color: color(blue);
+    color: color(black, light);
     margin-bottom: 0;
   }
 

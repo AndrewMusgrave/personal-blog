@@ -11,6 +11,7 @@
   }
 
   &:hover {
-    color: color(green, darker)
+    // color: color(green, darker)
+    color: color(teal, darkest)!important;
   }
 }

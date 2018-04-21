@@ -2,13 +2,15 @@
 
 .button {
   background: transparent;
-  border: 1px solid color(blue);
+  // border: 1px solid color(blue);
+  border: 1px solid color(teal);
   border-radius: 5px;
   padding: .5rem;
   cursor: pointer;
   outline: none;
 
-  color: color(blue);
+  // color: color(blue);
+  color: color(teal);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;

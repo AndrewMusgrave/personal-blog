@@ -1,4 +1,5 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import '../../styles/shared.scss';
 
 .social-media-icon {
   cursor: pointer;
@@ -6,4 +7,8 @@
   &.fa {
     font-size: 1.3rem;
   }
+}
+
+.fa {
+  color: color(teal);
 }

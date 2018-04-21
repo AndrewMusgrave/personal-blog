@@ -4,8 +4,10 @@
 .heading {
   margin: 0;
   font-family: 'Expletus Sans', cursive;
-  color: color(green, dark);
-  letter-spacing: .3rem;
+  // color: color(green, dark);
+  color: color(black, light);
+  // letter-spacing: .3rem;
+  letter-spacing: .1rem;
 }
 
 .headingLarge {
@@ -33,7 +35,8 @@
 }
 
 .nav-header {
-  color: color(blue);
+  // color: color(blue);
+  color: color(teal, lighter);
 }
 
 .spacing-header {

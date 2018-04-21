@@ -9,7 +9,8 @@ article {
 .card-personal {
   margin-top: .4rem;
   line-height: 1.2;
-  color: color(blue);
+  // color: color(blue);
+  color: color(black, subBase);
 
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,8 @@ article {
 
 .card-dot {
   font-size: 1rem;
-  color: color(green, lighter);
+  // color: color(green, lighter);
+  color: color(teal, darker);
 }
 
 .tag-container {
