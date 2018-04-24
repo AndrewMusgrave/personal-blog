@@ -13,10 +13,19 @@ function Card({
   date,
   image
 }) {
+  const imageMarkup = image && (
+    <img
+      className="card-image"
+      alt="post img"
+      src={image}
+    />
+  );
+
   const headingMarkup = title &&
     path &&
     excerpt && (
       <Link to={path}>
+        {imageMarkup}
         <Heading>{title}</Heading>
         <div className="excerpt">{excerpt}</div>
       </Link>
@@ -46,17 +55,8 @@ function Card({
       </div>
     );
 
-    const imageMarkup = image && (
-      <img
-        className="card-image"
-        alt="post img"
-        src={image}
-      />
-    );
-
   return (
     <React.Fragment>
-      {imageMarkup}
       <TextContainer>
         <article>
           {headingMarkup}
