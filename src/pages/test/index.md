@@ -7,9 +7,10 @@ author: 'Adtiya Agarwal'
 identifier: '35gsqzSDw324Fsad'
 minutes: '4'
 tags: ["javascript", "es6", "neat", "paradigm"]
+image: 'https://images.unsplash.com/photo-1422246654994-34520d5a0340?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70ce07b63768258c0936a360aa8a3ddf&auto=format&fit=crop&w=1350&q=80'
 ---
 
-async/await freed us from callback hell, but people have started abusing it — leading to the birth of async/await hell.
+Start async/await freed us from callback hell, but people have started abusing it — leading to the birth of async/await hell.
 
 In this article, I will try to explain what async/await hell is, and I’ll also share some tips to escape it.
 

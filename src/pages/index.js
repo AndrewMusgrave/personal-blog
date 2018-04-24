@@ -68,6 +68,7 @@ export const pageQuery = graphql`
             tags
             author
             avatar
+            image
           }
         }
       }

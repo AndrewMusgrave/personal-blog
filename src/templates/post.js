@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import Helmet from 'react-helmet';
 import axios from 'axios';
 import {Heading, Container, TextContainer, Spinner, Comments, Footer} from '../components';
@@ -55,8 +55,16 @@ export default class Template extends Component {
       ? <Spinner />
       : <Comments onSubmit={this.handleSubmit}  comments={comments} error={error} />;
 
+    const imageMarkup = post.frontmatter.image && (
+      <img
+        src={post.frontmatter.image}
+        alt="post header"
+        className="post-image"
+      />
+    );
+
     return (
-      <Fragment>
+      <div className="post-wrapper">
         <Helmet
           title={`${post.frontmatter.title} - Programming Paradigms`}
           meta={[
@@ -64,10 +72,13 @@ export default class Template extends Component {
           ]}
         />
         <Container>
+          <Heading Element="h1" size="large" spacingTop>
+            {post.frontmatter.title}
+          </Heading>
+        </Container>
+        {imageMarkup}
+        <Container>
           <TextContainer>
-            <Heading Element="h1" size="large" spacingTop>
-              {post.frontmatter.title}
-            </Heading>
             <div
               className="blog-post"
               dangerouslySetInnerHTML={{__html: post.html}}
@@ -76,7 +87,7 @@ export default class Template extends Component {
           {commentsMarkup}
         </Container>
         <Footer />
-      </Fragment>
+      </div>
     );
   }
 }
@@ -91,6 +102,7 @@ export const postQuery = graphql`
         path
         title
         identifier
+        image
       }
     }
   }

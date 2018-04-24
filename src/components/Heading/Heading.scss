@@ -4,14 +4,16 @@
 .heading {
   margin: 0;
   font-family: 'Expletus Sans', cursive;
-  color: color(green, dark);
-  letter-spacing: .3rem;
+  // color: color(green, dark);
+  color: color(black, light);
+  // letter-spacing: .3rem;
+  letter-spacing: .1rem;
 }
 
 .headingLarge {
   font-size: 2rem;
   font-weight: 600;
-  line-height: 3.4rem;
+  line-height: 2.6rem;
 }
 
 .headingMedium {
@@ -33,7 +35,8 @@
 }
 
 .nav-header {
-  color: color(blue);
+  // color: color(blue);
+  color: color(teal, lighter);
 }
 
 .spacing-header {
@@ -58,6 +61,12 @@
 
 .headingWeb {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .headingLarge {
+    line-height: 3.4rem;
+  }
 }
 
 @media (min-width: 768px) {

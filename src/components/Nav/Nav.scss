@@ -39,6 +39,9 @@
 
   .nav-links {
     margin-right: .6rem;
+    & a {
+      color: color(teal);
+    }
   }
 }
 
@@ -108,7 +111,8 @@ body {
   top: 0;
   left: 0;
   position: fixed;
-  background: color(green);
+  // background: color(green);
+  background: color(teal, darker);
   z-index: 9000;
 }
 

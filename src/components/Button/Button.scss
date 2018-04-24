@@ -2,18 +2,57 @@
 
 .button {
   background: transparent;
-  border: 1px solid color(blue);
+  // border: 1px solid color(blue);
+  border: 1px solid color(teal, darkest);
   border-radius: 5px;
   padding: .5rem;
   cursor: pointer;
   outline: none;
 
-  color: color(blue);
+  // color: color(blue);
+  color: color(teal, darkest);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: .1rem;
   text-align: center;
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: color(teal, darkest);
+    border-color: color(teal, darkest);
+    color: color(teal);
+  }
+
+  > a:focus,
+  > a:active,
+  > a:hover {
+    background-color: color(teal, darkest)!important;
+    border-color: color(teal, darkest)!important;
+    color: color(teal)!important;
+  }
+}
+
+.btn-nav {
+  border: 1px solid color(teal);
+  color: color(teal);
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: transparent;
+    border-color: color(teal, darkest);
+    color: color(teal, darkest);
+  }
+
+  > a:focus,
+  > a:active,
+  > a:hover {
+    background-color: transparent;
+    border-color: color(teal, darkest)!important;
+    color: color(teal, darkest)!important;
+  }
 }
 
 .btn-spacing {

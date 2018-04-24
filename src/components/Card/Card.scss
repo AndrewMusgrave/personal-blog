@@ -9,7 +9,8 @@ article {
 .card-personal {
   margin-top: .4rem;
   line-height: 1.2;
-  color: color(blue);
+  // color: color(blue);
+  color: color(black, subBase);
 
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,14 @@ article {
 
 .card-dot {
   font-size: 1rem;
-  color: color(green, lighter);
+  // color: color(green, lighter);
+  color: color(teal, darker);
+}
+
+.card-image {
+  width: 100%;
+  max-height: 7rem;
+  object-fit: cover,
 }
 
 .tag-container {
@@ -48,6 +56,12 @@ article {
   .card-personal {
     flex-direction: row;
   }
+
+.card-image {
+  width: 100%;
+  max-height: 10rem;
+  object-fit: cover;
+}
 
   .tag-container {
       justify-content: flex-end;

@@ -31,7 +31,8 @@
 .comment-section,
 .name-input {
   background: transparent;
-  border: 1px color(blue) solid;
+  // border: 1px color(blue) solid;
+  border: 1px color(dark) solid;
   border-bottom: none;
 
   &:active,
@@ -42,25 +43,32 @@
 }
 
 .comment-section {
-  border-bottom: 1px color(blue) solid;
+  // border-bottom: 1px color(blue) solid;
+  border-bottom: 1px color(dark) solid;
 }
 
 .btn-submitt {
   width: 100%;
-  background: color(green, light);
+  // background: color(green, light);
+  background: transparent;
   padding: .5rem;
   @include text-styles;
   color: color(dark);
-  border: 1px solid color(blue);
-  color: color(blue);
+  // border: 1px solid color(blue);
+  border: 1px solid color(teal, darker);
+  // color: color(blue);
+  color: color(teal, darker);
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn-submitt:hover,
 .btn-submitt:focus {
-  background-color: color(green, dark);
-  color: color(green, lighter);
+  // background-color: color(green, dark);
+  background-color: color(teal, darkest);
+  border-color: color(teal, darkest);
+  // color: color(green, lighter);
+  color: color(teal);
 }
 
 .comment-section {

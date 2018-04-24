@@ -8,6 +8,7 @@ identifier: 'SDjkwj8quwjSNDJWq1'
 tags: ["javascript", "api"]
 avatar: 'url'
 minutes: '6'
+image: 'https://images.unsplash.com/photo-1516922654979-6833a58a1b83?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=81c8acc08372891e76bd00e973bbbeb7&auto=format&fit=crop&w=1350&q=80'
 ---
 
 The Push API allows a web app to receive messages pushed by a server, even if the web app is not currently open in the browser or not running on the device.
