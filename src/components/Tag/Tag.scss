@@ -2,11 +2,21 @@
 
 .Tag {
   display: inline-block;
-  border: 1px solid color(green, lighter);
-  color: color(blue);
+  // border: 1px solid color(green, lighter);
+  border: 1px solid color(teal, darkest);
+  // color: color(blue);
+  color: color(teal, darkest);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 
   font-size: .9rem;
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: color(teal, darkest);
+    border-color: color(teal, darkest);
+    color: color(teal);
+  }
 }

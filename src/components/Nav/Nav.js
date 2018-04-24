@@ -64,7 +64,7 @@ class Nav extends Component {
         <Link to="search">
           <Icon src="search" />
         </Link>
-        <Button to={recentArticle}>Recent article</Button>
+        <Button nav to={recentArticle}>Recent article</Button>
       </div>
     );
 
@@ -109,10 +109,12 @@ class Nav extends Component {
         <SocialIcon
           url="https://twitter.com/"
           style={{height: '2rem', width: '2rem'}}
+          color="#b2e6e3"
         />
         <SocialIcon
           url="https://github.com/"
           style={{height: '2rem', width: '2rem'}}
+          color="#b2e6e3"
         />
       </div>
     );

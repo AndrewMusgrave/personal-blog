@@ -7,6 +7,7 @@ author: 'Andrew Musgrave'
 identifier: 'we9SDewqq0sdW'
 tags: ["JavaScript","stack","data structure","computer science"]
 minutes: '3'
+image: 'https://images.unsplash.com/photo-1422246654994-34520d5a0340?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70ce07b63768258c0936a360aa8a3ddf&auto=format&fit=crop&w=1350&q=80'
 ---
 
 ## The Stack
