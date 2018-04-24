@@ -7,7 +7,7 @@ author: 'Andrew Musgrave'
 identifier: 'sdf92ldF0df234'
 tags: ["JavaScript","queue","data structure","computer science"]
 minutes: '3'
-image: "https://images.unsplash.com/photo-1517601278517-456741619dad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdf85b8946a5d1a302693e8eedf903e5&auto=format&fit=crop&w=781&q=80"
+image: "https://images.unsplash.com/photo-1506774518161-b710d10e2733?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ff076230a3aea325e5b1ce3f6a7a208&auto=format&fit=crop&w=1500&q=80"
 ---
 
 ## The Queue
