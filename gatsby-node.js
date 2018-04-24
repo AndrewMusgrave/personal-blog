@@ -36,7 +36,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     const posts = res.data.allMarkdownRemark.edges;
 
-    posts.forEach(async ({node}) => {
+     // async
+    posts.forEach(({node}) => {
       // await axios.post(`https://programming-paradigms-api.herokuapp.com/api/post/`, {
       //     title: node.frontmatter.title,
       //     identifier: node.frontmatter.identifier,

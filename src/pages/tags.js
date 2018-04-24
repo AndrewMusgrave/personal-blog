@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
 import {Container, TextContainer, Heading, Tag, Link, Footer} from '../components';
 
@@ -9,6 +10,12 @@ function TagsPage({
 }) {
   return (
     <Fragment>
+      <Helmet
+        title="Tags - Programming Paradigms"
+        meta={[
+          {name: 'description', content: "List of tags associated with programming paradigm blog articles"},
+        ]}
+      />
       <Container>
         <TextContainer>
           <Heading spacing Element="h1" size="large">

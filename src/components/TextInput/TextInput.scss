@@ -15,7 +15,7 @@
   height: 3rem;
   transition: border-color 0.3s;
   width: 100%;
-  margin-bottom: 1.7rem;
+  margin-bottom: .3rem;
 
   &:focus,
   &:active {
@@ -27,4 +27,12 @@
 
 .input-center {
   text-align: center;
+}
+
+.text-error {
+  @include error-text-styles;
+}
+
+.text-message {
+  @include message-text-styles;
 }

@@ -3,4 +3,10 @@
 
 .footer-content {
   bottom: 0;
+  min-height: 125px;
+}
+
+.text-error {
+  @include error-text-styles;
+  // text-align: center;
 }

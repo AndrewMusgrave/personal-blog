@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import {
   Link,
   Container,
@@ -16,6 +17,12 @@ function Tags({pathContext, data}) {
   } tagged with "${tag}"`;
   return (
     <Container>
+      <Helmet
+        title={`${tag} tag - Programming Paradigms`}
+        meta={[
+          {name: 'description', content: `All blog posts associated with ${tag}`},
+        ]}
+      />
       <TextContainer>
         <Heading spacing Element="h1" size="large">
           {tagHeader}

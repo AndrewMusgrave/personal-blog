@@ -1,4 +1,5 @@
 import React from 'react';
+import kebabCase from 'lodash/kebabCase';
 import {Link, Tag, Heading, TextContainer} from '..';
 
 import './Card.scss';
@@ -34,7 +35,7 @@ function Card({
   const tagMarkup =
     tags &&
     tags.map((tag) => (
-      <Link key={tag} to={`/tags/${tag}`}>
+      <Link key={tag} to={`/tags/${kebabCase(tag)}`}>
         <Tag>{tag}</Tag>
       </Link>
     ));

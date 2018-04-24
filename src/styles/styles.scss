@@ -123,6 +123,13 @@
   }
 }
 
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .tag-list {
   list-style-type: none;
   margin: 0;

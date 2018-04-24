@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Helmet from 'react-helmet';
 import {Container, Card, Heading, TextContainer, TextInput} from '../components';
 
 import '../styles/styles.scss';
@@ -66,17 +67,23 @@ class SearchPage extends Component {
     return (
         // <div style={{height: '100%'}}>
       <Container>
-          <TextContainer>
-            <Heading Element="h1" size="large" spacing>
-              search my blog.
-            </Heading>
-            <TextInput
-              value={searchTerm}
-              onChange={this.handleSearch}
-              onKeyDown={this.handleKeyDown}
-              placeholder="React..."
-            />
-          </TextContainer>
+        <Helmet
+          title="Search - Programming Paradigms"
+          meta={[
+            {name: 'description', content: "Search the programming paradigm blog articles"},
+          ]}
+        />
+        <TextContainer>
+          <Heading Element="h1" size="large" spacing>
+            search my blog.
+          </Heading>
+          <TextInput
+            value={searchTerm}
+            onChange={this.handleSearch}
+            onKeyDown={this.handleKeyDown}
+            placeholder="React..."
+          />
+        </TextContainer>
         <ul className="post-list">{postMarkup}</ul>
       </Container>
         // </div>
