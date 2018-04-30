@@ -116,9 +116,6 @@ $colors: (
   @return map-get(map-get($colors, $c), $v);
 }
 
-
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
-
 @mixin text-styles {
   font-family: 'Josefin Sans', sans-serif;
   // color: color(dark, darker);

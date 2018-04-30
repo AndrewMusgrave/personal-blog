@@ -26,7 +26,8 @@ function IndexPage ({data}) {
           <img
             alt="author"
             style={{minHeight: '200px', minWidth: '200px'}}
-            src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg"
+            // src="https://farm5.staticflickr.com/4438/36177469644_0c7cf43939_o.jpg"
+            src="https://farm1.staticflickr.com/969/27923754728_92ba54c68e_n.jpg"
             width="200"
             height="200"
           />
