@@ -60,7 +60,7 @@ class Stack {
   // If array is not empty return the first element
   peek() {
   	return Boolean(this.size)
-    	? this.elements[this.size - 1]
+      ? this.elements[this.size - 1]
       : null;
   }
 

@@ -61,14 +61,14 @@ class Queue {
   // If array is not empty return the head element
   first() {
   	return Boolean(this.size)
-    	? this.elements[this.size -1]
+      ? this.elements[this.size -1]
       : null;
   }
 
 // If array is not empty return the tail element
   last() {
   	return Boolean(this.size)
-    	? this.elements[0]
+      ? this.elements[0]
       : null;
   }
 
