@@ -2,7 +2,7 @@
 path: '/recursively-flatten-arrays-in-javascript'
 title: 'Recursively flatten arrays in JavaScript'
 published: true
-date: '2018-05-2'
+date: '2018-05-02'
 author: 'Andrew Musgrave'
 identifier: 'ds8FE72jsFswe'
 tags: ["JavaScript","array"]
