@@ -12,7 +12,7 @@ image: 'https://images.unsplash.com/photo-1446508577056-c6e637f50230?ixlib=rb-0.
 
 Are you a spy? Do you like going incognito and stealing information? Is it your dream to scrape websites but have avoided it because you don’t know languages like python or ruby? Fear not, there is a beautiful JavaScript library for just this. You may have even used it in popular libraries like enzyme.
 
-I’ll walk you through the basics of setting up and running a web scraper using cheerio. The only requirement is that you have node installed. If you don’t no worries, it’s a very quick install.
+I’ll walk you through the basics of setting up and running a web scraper using cheerio. The only requirement is that you have node installed. If you don’t no worries, it’s a very [quick install](https://nodejs.org/en/download/).
 
 ***
 
