@@ -77,7 +77,7 @@ Because we’re all a little hipster and want to hop on the async / await train 
 })();
 ```
 
-Next we’ll make our request.  and load it into cheerio.
+Next we’ll make our request.
 
 > *As a side note a caveat of using axios is having to return the data. The catch is incase of any errors.*
 
