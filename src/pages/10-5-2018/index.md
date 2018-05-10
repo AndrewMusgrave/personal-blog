@@ -21,7 +21,7 @@ I’ll walk you through the basics of setting up and running a web scraper using
 Let’s begin by creating a directory for our scraper. Open the terminal and `cd` to wherever you would like the scraper to be placed. Next we’ll create a new directory and cd into it.
 
 ```bash
-mkdir node-scraper && cd $_
+mkdir node-scraper && cd node-scraper
 ```
 
 Then we’ll create a package.json. I won’t be changing the package defaults so I’ll add the `-y` flag to skip the questions.
@@ -59,8 +59,8 @@ Open the project up in your text editor and let’s get started! By now you shou
 First we’ll need to import the packages needed, so start off by requiring axios and cheerio.
 
 ```js
-const axios = require(‘axios’);
-const cheerio = require(‘cheerio’);
+const axios = require('axios');
+const cheerio = require('cheerio');
 ```
 
 Next we’ll want a url to scrape, for now let’s use Google.
@@ -77,30 +77,41 @@ Because we’re all a little hipster and want to hop on the async / await train 
 })();
 ```
 
-Next we’ll make our request and load it into cheerio.
+Next we’ll make our request.  and load it into cheerio.
 
 > *As a side note a caveat of using axios is having to return the data. The catch is incase of any errors.*
 
 ```js
 const response = await axios.get(SCRAPING_URL)
   .then(res => res.data)
-  .catch(err => throw(err));
-const $ = cheerio.load(response);
+  .catch(err => console.log(err));
 ```
 
-Now that we have our data ready, let’s parse it! We’ll look for all of the search results (which are h3’s) and push them into an array.
+We don't want to continue without our data so let's add an if statement and load our request into cheerio. Be careful where you place results or you may create scoping issues.
 
 ```js
-const articles = [];
-$('h3').each(function(i, elem) {
-  articles.push($(this).text());
+const results = [];
+
+if (response) {
+  const $ = cheerio.load(response);
+  // Place code inside here
+}
+```
+
+Now that we have our data ready, let’s parse it! We’ll look for all of the search results (which are h3’s) and push them into results.
+
+```js
+$('h3').each(function() {
+  results.push($(this).text());
 });
 ```
 
 Let’s end this party by logging the results.
 
+> *This may be place inside or outside of the if statement*
+
 ```js
-console.log(articles);
+console.log(results);
 ```
 
 Now run the program.
@@ -119,13 +130,19 @@ const SCRAPING_URL = 'https://www.google.com/search?q=web+scraping';
 (async () => {
   const response = await axios.get(SCRAPING_URL)
     .then(res => res.data)
-    .catch(err => throw(err));
-  const $ = cheerio.load(response);
+    .catch(err => console.log(err));
 
-  const articles = [];
-  $('h3').each(() => {
-    articles.push($(this).text());
-  });
-  console.log(articles);
+  const results = [];
+
+  if (response) {
+    const $ = cheerio.load(response);
+
+    $('h3').each(function() {
+      results.push($(this).text());
+    });
+  }
+
+  console.log(results);
 })();
+
 ```
