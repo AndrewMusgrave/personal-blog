@@ -61,7 +61,7 @@ class Nav extends Component {
 
     const navContentMarkup = (
       <div className="nav-content">
-        <Link to="search">
+        <Link aria-label="search" to="search">
           <Icon src="search" />
         </Link>
         <Button nav to={recentArticle}>Recent article</Button>
@@ -97,6 +97,7 @@ class Nav extends Component {
         {/* <Spinner /> */}
         <img src={Logo} alt="logo" style={{width: '2rem', marginRight: '5px'}} />
         <Link
+          aria-label="home"
           to="/"
         >
           {navHeadingMarkup}

@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 import './Link.scss';
 
-function Route ({children, name, to}) {
+function Route ({children, name, to, ...rest}) {
   return (
-    <Link to={to} className="link">
+    <Link {...rest} to={to} className="link">
       {name || children}
     </Link>
   );

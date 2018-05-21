@@ -30,7 +30,7 @@ function Tags({pathContext, data}) {
       </TextContainer>
       <PostList items={edges} />
       <Button>
-        <Link to="/tags">All tags</Link>
+        <Link aria-label="all tags" to="/tags">All tags</Link>
       </Button>
     </Container>
   );

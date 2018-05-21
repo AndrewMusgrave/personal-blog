@@ -25,7 +25,7 @@ function TagsPage({
         <ul className="tag-list">
           {group.map(tag => (
             <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <Link aria-label={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                 <Tag>{tag.fieldValue}</Tag>
               </Link>
               ({tag.totalCount})

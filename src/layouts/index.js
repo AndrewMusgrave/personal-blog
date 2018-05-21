@@ -15,7 +15,9 @@ function TemplateWrapper({children, data}) {
         ]}
         defer
         link={[{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Expletus+Sans'}, {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:300'}]}
-      />
+      >
+        <html lang="en" />
+      </Helmet>
       <Nav
         recentArticle={data.allMarkdownRemark.edges[0].node.frontmatter.path}
       />

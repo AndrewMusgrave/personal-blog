@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Programming Paradigms",
-        short_name: "P.P",
+        short_name: "P.P.",
         start_url: "/",
         background_color: "#62c6c2",
         theme_color: "#ffffff",

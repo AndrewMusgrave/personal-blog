@@ -25,7 +25,7 @@ function Card({
   const headingMarkup = title &&
     path &&
     excerpt && (
-      <Link to={path}>
+      <Link aria-label={`blog post for ${title}`} to={path}>
         {imageMarkup}
         <Heading>{title}</Heading>
         <div className="excerpt">{excerpt}</div>
@@ -35,7 +35,7 @@ function Card({
   const tagMarkup =
     tags &&
     tags.map((tag) => (
-      <Link key={tag} to={`/tags/${kebabCase(tag)}`}>
+      <Link aria-label={tag} key={tag} to={`/tags/${kebabCase(tag)}`}>
         <Tag>{tag}</Tag>
       </Link>
     ));

@@ -8,7 +8,7 @@ function Button({children, onClick, to, full, nav}){
   const navVar = nav ? ' btn-nav' : '';
 
   return to ? (
-    <Link to={to}>
+    <Link aria-label={to} to={to}>
       <button className={`button ${spacingVar}${navVar}`} onClick={onClick}>
         {children}
       </button>
