@@ -31,6 +31,7 @@ function TextInput({
         onKeyDown={onKeyDown}
         placeholder={placeholder}
         onBlur={onBlur}
+        aria-label="search"
       />
       {messageMarkup}
       {errorMarkup}

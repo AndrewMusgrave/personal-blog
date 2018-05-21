@@ -64,6 +64,7 @@ class Footer extends Component {
                   error={error}
                   message={message}
                   center
+                  aria-label="phone number"
                 />
               </form>
             </Container>
