@@ -9,6 +9,18 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-next`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Programming Paradigms",
+        short_name: "P.P",
+        start_url: "/",
+        background_color: "#62c6c2",
+        theme_color: "#ffffff",
+        display: "minimal-ui",
+        icon: "src/assets/andrew bear_final.png",
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {trackingId: config.googleAnalyticsId
       }
@@ -35,5 +47,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };
